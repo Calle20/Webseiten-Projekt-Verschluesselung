@@ -1,0 +1,32 @@
+{
+	"Startsnippet":
+	{
+		"scope": "html",
+		"prefix": ".start",
+		"description": "Der Startcode für unser Webseitenprojekt.",
+		"body": [
+		  "<html>",
+		  "    <head>",
+		  "        <link rel=\"stylesheet\" href=\"css/menü.css\" type=\"text/css\">",
+		  "        <link rel=\"stylesheet\" href=\"css/style.css\" type=\"text/css\">",
+		  "    </head>",
+		  "    ",
+		  "    <body>",
+		  "        <div class=\"menu\">",
+		  "            <div class=\"el\">",
+		  "               <p><a href=\"index.html\" class=\"p\">Home</a></p>",
+		  "                <p><a href=\"#\" class=\"p\">Home</a></p>",
+		  "                <p><a href=\"Caeser_Verschlüsselung.html\" class=\"p\">Die Caeser Verschlüsselung</a></p>",
+		  "                <p><a href=\"#\" class=\"p\">Home</a></p>",
+		  "                <p><a href=\"impressum.html\" class=\"p\">Impressum</a></p> ",
+		  "                <p class=\"menuside\">Menü</p>",
+		  "            </div>            ",
+		  "        </div>",
+		  "        <div class=\"content\">",
+		  "            ",
+		  "        </div>",
+		  "    </body>",
+		  "</html>"
+		],
+	}
+}

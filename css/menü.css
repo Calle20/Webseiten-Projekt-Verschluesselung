@@ -1,0 +1,59 @@
+.p {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 100%;
+  }
+.p:hover {
+    background-color: #555;
+    color: white;
+  }
+.menu{
+    display: flex;
+    margin-left: -9%;
+    margin-top: 0;
+    padding: 0;
+    width: 10%;
+    background-color: #f1f1f1;
+    height: 98%;
+    position: fixed;
+    overflow: auto; 
+    box-shadow: 0px 9px 23px 4px rgba(0, 0, 0, 0.39);
+    transition: margin 500ms ;
+  }
+.menu:hover {
+    margin: 0;
+    margin-left: -0.5%;
+    padding: 0;
+    width: 10%;
+    background-color: #f1f1f1;
+    height: 98%;
+    position: fixed;
+    overflow: auto;
+    box-shadow: 0px 9px 23px 4px rgba(0, 0, 0, 0.39);
+    
+  }
+  .menu:hover .menuside{
+      visibility: hidden;
+  }
+  .content{
+    margin-left: 2%;
+  }
+  .menutext{
+    writing-mode: vertical-rl;
+    margin-top: 200%;
+    float: right;
+    position: absolute;
+  }
+  .el{
+    margin-left: 4%;
+    width: 80%;
+    font-size: 100%;
+  }
+.menuside{
+    writing-mode: vertical-lr;
+    margin-left: 105%;
+    margin-top: 120%;
+    transition: visibility 200ms ease-in ;
+}

@@ -1,0 +1,11 @@
+.textbox {
+    width: 2vw;
+}
+.mainheading{
+    text-align: center;
+    font-size: 4vw;
+}
+body{
+    background-image: url("https://www.rankeffect.de/mag/wp-content/uploads/2018/06/Verschluesselung.jpg");
+    background-size: cover;
+}
