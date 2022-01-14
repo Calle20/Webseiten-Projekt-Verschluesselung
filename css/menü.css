@@ -1,44 +1,50 @@
-.p {
+.p , #menu p{
     display: block;
     color: #000;
     padding: 8px 16px;
     text-decoration: none;
-    font-size: 100%;
+    font-size: 105%;
+    /*word-break:break-all;word-wrap:break-word;*/
   }
-.p:hover {
+.mainmenu:hover, .p:hover {
     background-color: #555;
     color: white;
   }
+  /* Style des Menüs*/
 .menu{
     display: flex;
-    margin-left: -9%;
+    margin-left: -13%;
     margin-top: 0;
     padding: 0;
-    width: 10%;
+    width: 15%;
     background-color: #f1f1f1;
     height: 98%;
     position: fixed;
     overflow: auto; 
     box-shadow: 0px 9px 23px 4px rgba(0, 0, 0, 0.39);
     transition: margin 500ms ;
+    overflow: hidden;
+    overflow-x: hidden;
   }
+  /* Style des Menüs nach ausfahren*/
 .menu:hover {
     margin: 0;
     margin-left: -0.5%;
     padding: 0;
-    width: 10%;
+    width: 15%;
     background-color: #f1f1f1;
     height: 98%;
     position: fixed;
     overflow: auto;
     box-shadow: 0px 9px 23px 4px rgba(0, 0, 0, 0.39);
-    
+    overflow: hidden;
+    overflow-x: hidden;
   }
   .menu:hover .menuside{
       visibility: hidden;
   }
   .content{
-    margin-left: 2%;
+    margin-left: 3%;
   }
   .menutext{
     writing-mode: vertical-rl;
@@ -47,13 +53,77 @@
     position: absolute;
   }
   .el{
-    margin-left: 4%;
+    margin-left: 7%;
     width: 80%;
-    font-size: 100%;
+    font-size: 120%;
+    margin-top: 5%;
   }
 .menuside{
     writing-mode: vertical-lr;
     margin-left: 105%;
-    margin-top: 120%;
+    margin-top: -110%;
     transition: visibility 200ms ease-in ;
 }
+* {
+  margin: 0;
+  padding: 0;
+  }
+  
+  /*--formatiert die Menüleiste--*/
+  #menu{
+   margin-left: 10%;
+
+  }
+  
+  /*--formatiert die Themenbl&ouml;cke--*/
+  #menu ul {
+  width: 75%;
+  list-style-type: none;
+  }
+  
+  /*--definiert die "Drop-Down-Links" im Normalzustand--*/
+  #menu a {
+  text-decoration: none;
+  display: block;
+  border: 1px solid #ccc;
+  text-align: center;
+  background: white;
+  color: black;
+  font-size: 100%;
+  width: 90%;
+  }
+  
+  /*--definiert die "Drop-Down-Links" im Hoverzustand--*/
+  #menu a:hover {
+    background-color: #555;
+    color: white;
+  }
+  
+  /*verhindert im Zusammenhang mit position absolute bei ul ul
+  *eine H&ouml;henvergr&ouml;&szlig;erung von #menu beim Hovern--
+  */
+  
+  #menu li {
+  position: relative;
+  }
+  
+  /*--versteckt die "Drop-Down-Links", solange nicht gehovert wird--*/
+  #menu ul ul {
+  position: absolute;
+  top: 0;
+  left: 83%;
+  z-index: 2;
+  display: none;
+  }
+  
+  /*--l&auml;sst die Dropdown-Links beim Hovern erscheinen--*/
+  #menu ul li:hover ul {
+  display: block;
+  }
+  #menu ul li:hover p{
+    background-color: #555;
+    color: white;
+  }
+  .left{
+    margin-left: -15%;
+  }
