@@ -61,7 +61,7 @@
 .menuside{
     writing-mode: vertical-lr;
     margin-left: 105%;
-    margin-top: -110%;
+    margin-top: -100%;
     transition: visibility 200ms ease-in ;
 }
 * {
