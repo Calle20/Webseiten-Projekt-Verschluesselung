@@ -44,7 +44,11 @@
       visibility: hidden;
   }
   .content{
-    margin-left: 3%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: justify;
+    word-break:break-all;
+    word-wrap:break-word;
   }
   .menutext{
     writing-mode: vertical-rl;
@@ -55,7 +59,7 @@
   .el{
     margin-left: 7%;
     width: 80%;
-    font-size: 120%;
+    font-size: 1vw;
     margin-top: 5%;
   }
 .menuside{
