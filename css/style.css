@@ -9,7 +9,7 @@
     margin-top: 1%;
     font-size: 1.2vw;
     word-break:break-all;
-    word-wrap:break-word
+    word-wrap:normal
 }
 .underheading{
     font-size: 2vw;
@@ -17,4 +17,9 @@
 }
 #imgDefInd{
     margin-top: 1%;
+}
+body{
+    background-image: url("Bilder/Verschluesselung.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
