@@ -11,15 +11,19 @@
     word-break:break-all;
     word-wrap:normal
 }
-.underheading{
+.subheading{
     font-size: 2vw;
     margin-top: 1%;
 }
 #imgDefInd{
-    margin-top: 1%;
+    margin-top: 3%;
 }
 body{
     background-image: url("Bilder/Verschluesselung.png");
     background-repeat: no-repeat;
     background-size: cover;
+}
+#videodef{
+    margin-top: -20%;
+    margin-left: 55%;
 }
