@@ -13,7 +13,7 @@
   /* Style des Menüs*/
 .menu{
     display: flex;
-    margin-left: -13%;
+    margin-left: -12%;
     margin-top: 0;
     padding: 0;
     width: 15%;
@@ -64,8 +64,9 @@
   }
 .menuside{
     writing-mode: vertical-lr;
-    margin-left: 105%;
+    margin-left: 97%;
     margin-top: -100%;
+    font-size: 125%;
     transition: visibility 200ms ease-in ;
 }
 * {

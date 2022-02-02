@@ -1,7 +1,7 @@
 var wordcount=[]
 function Caeser_Decode(){
     for (let index = 0; index < 2; index++) {
-        var input=document.getElementsByTagName("p")[index+13]
+        var input=document.getElementsByTagName("p")[index+12]
         var inputtxt=input.innerHTML
         var countarray=inputtxt.split(" ")
         wordcount[index]=countarray.length
@@ -27,7 +27,7 @@ async function Caeser_Encode(){
     Decoder(input,100)
     var wait=wordcount[2]*100+50
     await delay(wait)
-    var input=document.getElementsByTagName("p")[13]
+    var input=document.getElementsByTagName("p")[12]
     Decoder(input,50)
     var wait=wordcount[0]*50+900
     await delay(wait)
@@ -35,7 +35,7 @@ async function Caeser_Encode(){
     Decoder(input,100)
     var wait=wordcount[3]*100+150
     await delay(wait)
-    var input=document.getElementsByTagName("p")[14]
+    var input=document.getElementsByTagName("p")[13]
     Decoder(input,50)
 }
 function message(){
