@@ -104,5 +104,28 @@
 		  "        </div>"
 		],
 		"description": "Menüsnippet"
+	  },
+	  "h2": {
+		"prefix": ".h2",
+		"body": [
+		  "<h2 class=\"subheading\">${1}</h2>"
+		],
+		"description": "h2"
+	  },
+	  "h1": {
+		"prefix": ".h1",
+		"body": [
+		  "<h1 class=\"mainheading\">${1}</h1>",
+		  ""
+		],
+		"description": "h1"
+	  },
+	  "p": {
+		"prefix": ".p",
+		"body": [
+		  "<p class=\"text\">${1}</p>",
+		  ""
+		],
+		"description": "p"
 	  }
 }
