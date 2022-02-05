@@ -20,7 +20,7 @@ function Caeser_Decode(){
     wordcount[3]=countarray.length
     var output=caesarShift(inputtxt,5)
     input.innerHTML=output;
-    setTimeout(message,150)
+    setTimeout(message("Der Text dieser Webseite wurde mit der Caeser-Verschlüsselung verschlüsselt."),150)
 }
 async function Caeser_Encode(){
     var input=document.getElementsByTagName("h1")[0]
@@ -38,9 +38,16 @@ async function Caeser_Encode(){
     var input=document.getElementsByTagName("p")[13]
     Decoder(input,50)
 }
-function message(){
-    alert("Das ist der Text dieser Webseite mit der Caeser-Verschlüsselung verschlüsselt. Zum Entschlüsseln OK drücken.")
-    setTimeout(Caeser_Encode,500)
+function message(msg){
+    if (msg != undefined) {
+      document.getElementById("boxTxt").innerHTML = msg;
+      document.getElementById("boxBack").classList.add("show");
+      setTimeout(message,2000)
+    } 
+    else { 
+      document.getElementById("boxBack").classList.remove("show");
+      setTimeout(Caeser_Encode,500);
+    }
 }
 function delay(milliseconds){
     return new Promise(resolve => {

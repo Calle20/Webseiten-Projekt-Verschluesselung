@@ -37,3 +37,23 @@ body{
     align-items: center;
     margin-top: 1%;
 }
+#boxBack {
+    position: fixed; z-index: 999;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+   
+    background: rgba(0, 0, 0, 0.5);
+
+    display: none;
+  }
+#boxBack.show { display: block; }
+#boxWrap {
+    position: absolute;
+    top: 10%; left: 50%;
+    transform: translate(-50%, -50%);
+   
+    min-width: 320px; max-width: 600px;
+    padding: 10px;
+
+    background: #fff;
+  }
