@@ -57,3 +57,18 @@ body{
 
     background: #fff;
   }
+  #hieroglyphen{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  #imghiero{
+      margin-left: 3%;
+  }
+  #hieroglyphenhead{
+      margin-bottom: 1%;
+  }
+  td, th {
+      border: 1pt solid black;
+  }
+  
