@@ -26,6 +26,7 @@ body{
     background-image: url("Verschluesselung.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 #videodef{
     width: 42%;
@@ -57,18 +58,18 @@ body{
 
     background: #fff;
   }
-  #hieroglyphen{
+  .box{
       display: flex;
       justify-content: space-between;
       align-items: center;
   }
-  #imghiero{
+  .imgbox{
       margin-left: 3%;
-  }
-  #hieroglyphenhead{
-      margin-bottom: 1%;
   }
   td, th {
       border: 1pt solid black;
+      font-size: 1vw;
   }
-  
+  table{
+      margin-top: 1%;
+  }
