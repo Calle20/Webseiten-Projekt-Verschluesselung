@@ -23,7 +23,7 @@
     width: 58%;
 }
 body{
-    background-image: url("Verschluesselung.png");
+    background-image: url("Background.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -69,7 +69,19 @@ body{
   td, th {
       border: 1pt solid black;
       font-size: 1vw;
+      text-align: center;
   }
   table{
       margin-top: 1%;
+  }
+  #video_altertum{
+      margin-top: 1%;
+      display: flex;
+      justify-content: center;
+  }
+  #tablepolybios td, #tablepolybios th{
+    width: 5vw;
+  }
+  #tableatbash td, #tableatbash th{
+    width: 7vw;
   }
