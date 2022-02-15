@@ -1,6 +1,4 @@
-.textbox {
-    width: 2vw;
-}
+
 .mainheading{
     text-align: center;
     font-size: 4vw;
@@ -84,4 +82,20 @@ body{
   }
   #tableatbash td, #tableatbash th{
     width: 7vw;
+  }
+  #CaeserDecode, #CaeserEncode{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: 1%;
+      width: 68%;
+  }
+  .textbox{
+      font-size: 1vw;
+  }
+  #zahlde, #zahlen{
+      width: 2vw;
+  }
+  .button{
+      font-size: 1vw;
   }

@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/menü.css" type="text/css">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <script src="js/CaeserVerschlüsselung.js"></script>
+        <title>Caeser Verschlüsselung</title>
+    </head>
+    
+    <body>
+        <script type="text/javascript" src="js/menü.js"></script>
+        <div class="content">
+            <h1 class="mainheading">Anfänge der symmetrischen Verschlüsselung</h1>
+
+            <h2 class="subheading">Was ist eine symmetrische Verschlüsselung?</h2>
+
+            <p class="text"></p>
+            
+            <h2 class="subheading">Caeser-Verschlüsselung</h2>
+
+            <p class="text"></p>
+            
+            <div id="CaeserDecode">
+                <p class="text">Den Klartext </p>
+                <input class="textbox" id="boxde" name="textbox" type="text">
+                <p class="text">mit der Verschiebung </p>
+                <input class="textbox" type="text" id="zahlde" >
+                <input class="button" type="button" value="Verschlüsseln" onclick="ButtonDecoden_Click()">
+                <p class="text"> Verschlüsselter Text: </p>
+                <input class="textbox" type="text" id="outputde">
+            </div>
+            
+            <div id="CaeserEncode">
+                <p class="text">Den verschlüsselten Text </p>
+                <input class="textbox" id="boxen" name="textbox" type="text">
+                <p class="text">mit der Verschiebung </p>
+                <input class="textbox" class="textbox" type="text" id="zahlen" >
+                <input class="button" type="button" value="Entschlüsseln" onclick="ButtonEncoden_Click()">
+                <p class="text"> Klartext: </p>
+                <input class="textbox" type="text" id="outputen"> 
+            </div>
+
+            <h2 class="subheading">Vignere-Verfahren</h2>
+
+            <p class="text"></p>
+
+            <video controls="controls" data-aspect="16x9" width="30%"> 
+                <source src="Medien/Videos/5502684-Symmetrische_Verfahren_Verschluesselung_Caesar162399.mp4" type="video/mp4" />
+                <track src="Medien/Videos/5502684-Symmetrische_Verfahren_Verschluesselung_Caesar162399.mp4" kind="captions" label="An" />
+            </video>
+        </div>
+    </body>
+</html>

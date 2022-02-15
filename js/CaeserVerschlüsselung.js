@@ -1,22 +1,22 @@
 function ButtonDecoden_Click(){
-    var plaintext=document.getElementById('box').value
-	var shiftText = document.getElementById('zahl').value;
+    var plaintext=document.getElementById('boxde').value
+	var shiftText = document.getElementById('zahlde').value;
 	if (!/^-?\d+$/.test(shiftText)) {
 		alert("Der Schlüssel muss eine Zahl sein.");
 		return;
 	}
-    var txtout=document.getElementById('output')
+    var txtout=document.getElementById('outputde')
 	var shift = parseInt(shiftText, 10);
     txtout.value=caesarShift(plaintext,shift);
 }
 function ButtonEncoden_Click(){
-    var plaintext=document.getElementById('box').value
-	var shiftText = document.getElementById('zahl').value;
+    var plaintext=document.getElementById('boxen').value
+	var shiftText = document.getElementById('zahlen').value;
 	if (!/^-?\d+$/.test(shiftText)) {
 		alert("Der Schlüssel muss eine Zahl sein.");
 		return;
 	}
-    var txtout=document.getElementById('output')
+    var txtout=document.getElementById('outputen')
 	var shift = parseInt(shiftText, 10);
 	shift = (26 - shift) % 26;
     txtout.value=caesarShift(plaintext,shift);
