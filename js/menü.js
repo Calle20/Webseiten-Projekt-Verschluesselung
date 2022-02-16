@@ -15,7 +15,7 @@ document.write(
           "                        <li><a href=\"Enigma.html\" class=\"li\">Enigma</a></li>",
           "                        <li><a href=\"Lorenz-Maschine.html\" class=\"li\">Lorenz-Maschine</a></li>",
           "                        <li><a href=\"T43_T52.html\" class=\"li\">T43 und T52</a></li>",
-          "                        <li><a href=\"Schlüsselgeräte_39_41.html\" class=\"li\">Schlüssel-<br></br>geräte 39/41</a></li>",
+          "                        <li><a href=\"Schlüsselgeräte_39_41.html\" class=\"li\">Schlüssel-geräte 39/41</a></li>",
           "                    </ul>",
           "                </li>",
           "            </ul>",
