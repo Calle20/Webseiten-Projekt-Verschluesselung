@@ -1,0 +1,52 @@
+60 v. Chr.	Cäsar Chiffre			
+1428	Alphabetum Kaldeorum Geheimschrift				
+1480	Voynich Manuskript							
+1585	Vigenère Chiffre			
+1586	Autokey Chiffre	
+1586	Maria Stuart Geheimschrift		
+1623	Bacon Code			
+1660	Grande Chiffre	
+1680	Gronsfeld Chiffre
+1770	Codex Copiale Code								
+1780	Zauberhandschrift (Kassel)		
+1794	Freimaurer Code		
+1854	Playfair Chiffre					
+1880	Nihilisten Substitution							
+1880	Nihilisten Transposition Chiffre			
+1881	Fleissner Chiffre
+1. Weltkrieg:	
+1913	Mexican Army Cipher Wheel					
+1913	Doppelter Spaltentausch Chiffre
+1914	ABC Chiffre
+1914	Pletts Scheibe
+1916	M-138 / CSP-845	Parker Hitt
+1917	Heberns Rotor-Chiffriermaschine
+1918	ADFGX Chiffre	
+1918	ADFGVX Chiffre		
+1925	Kryha Chiffriermaschine
+1922	M-94 / CSP-488
+2. Weltkrieg		
+1932	Enigma Chiffriermaschine				
+1932	Geheimschreiber T52
+1934	Red Chiffriermaschine
+1936	M-209 / CSP-1500 Chiffriermaschine Hagelin
+1937	Purple Chiffriermaschine	
+1938	Lorenz Maschine							
+1940	SIGABA Rotor-Chiffriermaschine
+1941	Doppelkastenschlüssel Chiffre	
+1941	Schlüsselgerät 41 (Hitlermühle)
+1944	Rasterschlüssel 44		
+1952	KL-7 Chiffriermaschine
+1955	Fialka Chiffriermaschine	
+1955	VIC Chiffre
+1977	DES 
+1977	RSA 					
+1982	Triple-DES Chiffre
+1987	RC2 					
+1987	RC4	
+2000	AES 
+2000	Serpent Chiffre
+2000	MARS Chiffre
+
+
+Stromchiffre

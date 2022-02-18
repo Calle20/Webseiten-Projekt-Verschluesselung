@@ -1,34 +1,30 @@
 <html>
     <head>
-        <script src="public/CaeserVerschlüsselung.js"></script>
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <link rel="stylesheet" href="css/menü.css" type="text/css">
+        <link rel="shortcut icon" type="image/x-icon" href="Medien/Icon/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="Medien/Icon/favicon.ico" />
         <title>Altertum</title>
     </head>
 
     <body>
-        <script type="text/javascript" src="menü.js"></script>
+        <script type="text/javascript" src="js/menü.js"></script>
         <div class="content">
             <h1 class="mainheading">Verschlüsselung im Altertum</h1>
 
-            
-            <div id="hieroglyphen">
+            <div class="box">
                 <div>
-                   <h2 class="subheading" id="hieroglyphenhead">Hieroglyphen</h2>
+                   <h2 class="subheading">Hieroglyphen</h2>
                    <p class="text">Bereits die alten Ägypter benutzten die Verschlüsselung. Ihr 3000 vor Christus entstandenes Hieroglyphen-Alphabet bestand nicht aus Buchstaben, sondern aus Zeichen und Bildern. Das Wort „Hieroglyphe“ kommt aus dem Griechischen und bedeutet „Heilige Einkerbung“. Hieroglyphen wurden meistens in Stein eingekerbt. Man konnte in alle Richtungen, dass heißt waagrecht oder senkrecht und von links nach rechts oder anders herum. Hieroglyphen wurden meist in religiösen Zusammenhängen verwendet. Im Alltag nutzten die Ägypter eine einfachere Schrift, mit der sie unter anderem auf Tonscherben oder Papyrus schrieben. Lange Zeit war die Bedeutung der Zeichen vergessen. 1822 entzifferte dann der Franzose Jean-François Champollion die Hieroglyphen.</p>
                 </div>
-                <img id="imgHiero" src="https://i.pinimg.com/originals/5d/5f/8d/5d5f8d5de4426573527e83a4b7db0056.jpg" width="22%"> 
+                <img class="imgbox" src="https://i.pinimg.com/originals/5d/5f/8d/5d5f8d5de4426573527e83a4b7db0056.jpg" width="22%"> 
             </div>
-
-            <h2 class="subheading">Keilschrift</h2>
-
-            <p class="text">Die Keilschrift ist ein im vorderne Orient zum Schrieben mehrerer Sprachen verwendetes Schriftsystem. Es wurde vom 34. Jh. v. Chr. bis mindestens ins 1. Jh. n. Chr. benutzt. Der Name stammt von den Grundelementen dieser Schrift: waagrechten, senkrechten und schrägen Keilen.</p>
 
             <h2 class="subheading">Atbash</h2>
 
             <p class="text">Die von hebräischen Gelehrten genutzte Geheimschrift Atbash, entstanden etwa 500 v. Chr., nutzte ein quasi „umgedrehtes“ Alphabet. Dabei wurde das erstes Zeichen des hebräischen Alphabets – Aleph – mit dem letzten Zeichen – Taw – verschlüsselt, das zweite – Beth – mit dem vorletzten – Schin –, usw. Der Name kommt von den beiden ersten und letzten Zeichen des hebräischen Alphabets.</p>
 
-            <table>
+            <table id="tableatbash">
                 <tr>
                     <td>א (aleph)</td>
                     <td>ב (beth)</td>
@@ -57,22 +53,47 @@
                 </tr>
             </table>
 
-            <h2 class="subheading">Skytale</h2>
+            <div class="box">
+                <div>
+                   <h2 class="subheading">Skytale</h2>
+                   <p class="text">Die im 5. Jh. v. Chr. entwickelte Skytale (griech.: "scytale"; Stock, Stab) ist das älteste bekannte militärische Verschlüsselungsverfahren. Die Ver-/Entschlüsselung funktioniert mit einem Stock mit einem bestimmten Durchmesser, auf den ein Leder- oder Papierstreifen wendelförmig gewickelt wird. Die Nachricht konnte dadurch quer über den Stab auf den Streifen geschrieben bzw. gelesen werden. Nach dem Abwickeln des Streifens waren alle Buchstaben durcheinander.Sie konnten erst gelesen werden, wenn man den Streifen um einen Stab mit dem richtigen Durchmesser gewickelt hatte. Der Durchmesser ist der Schlüssel dieser Verschlüsselung. Da man einfach Stöcke verschiedener Durchmesser ausprobieren konnte, war diese Methode nicht besonders sicher.</p>
+                </div>
+                <img class="imgbox" src="http://kas.zum.de/images/thumb/5/51/Skytale.png/270px-Skytale.png" width="22%"> 
+            </div>
 
-            <p class="text">Die im 5. Jh. v. Chr. entwickelte Skytale (griech.: "scytale"; Stock, Stab) ist das älteste bekannte militärische Verschlüsselungsverfahren. Die Ver-/Entschlüsselung funktioniert mit einem Stock mit einem bestimmten Durchmesser, auf den ein Leder- oder Papierstreifen wendelförmig gewickelt wird. Die Nachricht konnte dadurch quer über den Stab auf den Streifen geschrieben bzw. gelesen werden. Nach dem Abwickeln des Streifens waren alle Buchstaben durcheinander.Sie konnten erst gelesen werden, wenn man den Streifen um einen Stab mit dem richtigen Durchmesser gewickelt hatte. Der Durchmesser ist der Schlüssel dieser Verschlüsselung. Da man einfach Stöcke verschiedener Durchmesser ausprobieren konnte, war diese Methode nicht besonders sicher.</p>
+            <div class="box">
+                <div>
+                   <h2 class="subheading">Polybios Chiffre</h2>
+                   <p class="text">Für diese Verschlüsselunng nutzt man ein 5x5 (oder 6x6 mit Ziffern) Quadrat, in dass der Schlüssel geschrieben wird. Die restlichen Felder werden mit dem restlichen Alphabet aufgefüllt. Der verschlüsselte Text sind dann die Koordinaten der Buchstaben. Das Verfahren wurde nach dem griechischen Geschichtsschreiber Polybios benannt. Man kann das Kodierungsverfahren auch ohne Schlüssel verwenden, indem man die Buchstaben von A bis Z (ggf. gefolgt von 0 bis 9) in das Quadrat schreibt, der feste Schlüssel dann also das Alphabet ist.</p>
+                </div>
+                <table class="imgbox" id="tablepolybios">
+                    <tr>
+                        <th></th> <th>1</th> <th>2</th> <th>3</th> <th>4</th> <th>5</th>
+                    </tr>
+                    <tr>
+                        <th>1</th> <td>A</td> <td>B</td> <td>C</td> <td>D</td> <td>E</td> 
+                    </tr>
+                    <tr>
+                        <th>2</th> <td>F</td> <td>G</td> <td>H</td> <td>I</td> <td>K</td> 
+                    </tr>
+                    <tr>
+                        <th>3</th> <td>L</td> <td>M</td> <td>N</td> <td>O</td> <td>P</td> 
+                    </tr>
+                    <tr>
+                        <th>4</th> <td>Q</td> <td>R</td> <td>S</td> <td>T</td> <td>U</td> 
+                    </tr>
+                    <tr>
+                        <th>5</th> <td>V</td> <td>W</td> <td>X</td> <td>Y</td> <td>Z</td> 
+                    </tr>
+                </table>
+            </div>
 
-            <h2 class="subheading">Caeser Verschlüsselung</h2>
-            
-            <input id="box" name="textbox" type="text">
-            <input class="textbox" type="text" id="zahl" >
-            <input type="button" value="Verschlüsseln" onclick="ButtonDecoden_Click()">
-            <input type="button" value="Entschlüsseln" onclick="ButtonEncoden_Click()">
-            <input type="text" id="output">
-
-            <video controls="controls" data-aspect="16x9" width="40%"> 
-                <source src="Medien/Videos/Alte Methoden.mp4" type="video/mp4" />
-				<track src="Medien/Videos/Alte Methoden.mp4" kind="captions" label="An" />
-			</video>
+            <div id="video_altertum">
+                <video controls="controls" data-aspect="16x9" width="100%"> 
+                    <source src="Medien/Videos/Alte Methoden.mp4" type="video/mp4" />
+				    <track src="Medien/Videos/Alte Methoden.mp4" kind="captions" label="An" />
+			    </video> 
+            </div>
         </div>
     </body>
 </html>

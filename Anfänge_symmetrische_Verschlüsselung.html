@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/menü.css" type="text/css">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="shortcut icon" type="image/x-icon" href="Medien/Icon/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="Medien/Icon/favicon.ico" />
+        <script src="js/CaeserVerschlüsselung.js"></script>
+        <title>Anfänge symmetrische Verschlüsselung</title>
+    </head>
+    
+    <body>
+        <script type="text/javascript" src="js/menü.js"></script>
+        <div class="content">
+            <h1 class="mainheading">Anfänge der symmetrischen Verschlüsselung</h1>
+
+            <h2 class="subheading">Was ist eine symmetrische Verschlüsselung?</h2>
+
+            <p class="text"> Bei einer symmetrischen Verschlüsselung erfolgen Chiffrierung und Dechiffrierung mit ein und demselben Schlüssel. Das heißt, sowohl Sender und Empfänger müssen den gemeinsamen Schlüssel besitzen. Damit Dritte die chiffrierten Informationen nicht entschlüsseln können, wird der Schlüssel geheim gehalten.  Daher spricht man bei symmetrischen Verschlüsselungen von einem Private-Key-Verfahren.</p>
+            
+            <h2 class="subheading">Caeser-Verschlüsselung</h2>
+
+            <p class="text">Bei der Caeser-Verschlüsselung handelt es sich um eine monoalphabetische Verschlüsselung, dass heißt es kommt bei der Ver-/Entschlüsselung nur ein Schlüsselalphabet zum Einsatz. Das Schlüsselalphabet ist in diesem Fall das lateinische Alphabet. Um den Geheimtext zu erhalten, wird jeder Buchstaben um eine bestimmte Anzahl an Buchstaben verschoben. Ist das Alphabet zu Ende, wird wieder von vorne begonnen. Julius Cäsar wählte die Verschiebung 3. Es ist aber jede beliebige Zahl möglich. Die Entschlüsselung erfolgt, indem man in die andere Richtung verschiebt. Wenn man also den Buchstaben A um 3 Stellen verschiebt, erhält man das D. Um wieder zum A zu gelangen, verschiebt man vom D einfach 3 Stellen zurück und kommt somit wieder auf den Klartextbuchstaben. Das Verfahren ist auch als ROT (von 'rotate', engl. für drehen / verschieben) bekannt.</p>
+           
+            <div id="Chiffrierscheibe" class="box">
+                <div>
+                    <h3 class="subsubheading">Die Chiffrierscheibe</h3>
+
+                    <p class="text">Im 15. Jahrhundert erfand Leon Battista Alberti die Chiffrierscheibe mit einem inneren und äußeren Kreis, die man auf beliebige Verschiebungen einstellen konnte und so leicht zu einem Klartextbuchstaben ein Chiffratbuchstaben ablesen konnte.</p>
+
+                    <p>Die Chriffierscheibe, welche in Russland von Leon Battista Alberti erfunden wurde, war das erste Gerät womit man Sachen in verschiedensten Formen Verschlüsseln konnte. Dieses Konstruk ist aus mindesten 2 Scheiben Aufgebaut. Auf den erinzelnen Scheiben sind verschieden Zahlen, Buchstaben oder andere Zeichen. Durch verdrehen der Scheiben entsteht immerwieder neue Kombinationen, welche man an der Chiffrierscheibe ablesen kann. </p>
+                </div>
+                <img src="https://de.academic.ru/pictures/dewiki/85/UnionCipherDisk_nsa.jpg" class="imgbox" width="30%">
+   
+                <img src="https://www.thoughtco.com/thmb/GRChVc6Uy27oS7mGnXZA8lk869Y=/1500x1966/filters:fill(auto,1)/GettyImages-2663424-5c5b3369c9e77c0001661eca.jpg" width="30%" alt="">
+                </div>
+                
+            <div id="CaeserDecode">
+                <p class="text">Den Klartext </p>
+                <input class="textbox" id="boxde" name="textbox" type="text">
+                <p class="text">mit der Verschiebung </p>
+                <input class="textbox" type="text" id="zahlde" >
+                <input class="button" type="button" value="Verschlüsseln" onclick="ButtonDecoden_Click()">
+                <p class="text"> Verschlüsselter Text: </p>
+                <input class="textbox" type="text" id="outputde">
+            </div>
+            
+            <div id="CaeserEncode">
+                <p class="text">Den verschlüsselten Text </p>
+                <input class="textbox" id="boxen" name="textbox" type="text">
+                <p class="text">mit der Verschiebung </p>
+                <input class="textbox" class="textbox" type="text" id="zahlen" >
+                <input class="button" type="button" value="Entschlüsseln" onclick="ButtonEncoden_Click()">
+                <p class="text"> Klartext: </p>
+                <input class="textbox" type="text" id="outputen"> 
+            </div>
+
+            <h2 class="subheading">Vignere-Verfahren</h2>
+
+            <p class="text"></p>
+
+            <video controls="controls" data-aspect="16x9" width="30%"> 
+                <source src="Medien/Videos/5502684-Symmetrische_Verfahren_Verschluesselung_Caesar162399.mp4" type="video/mp4" />
+                <track src="Medien/Videos/5502684-Symmetrische_Verfahren_Verschluesselung_Caesar162399.mp4" kind="captions" label="An" />
+            </video>
+        </div>
+    </body>
+</html>
