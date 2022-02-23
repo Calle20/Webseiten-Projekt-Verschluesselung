@@ -1,15 +1,3 @@
-60 v. Chr.	Cäsar Chiffre			
-1428	Alphabetum Kaldeorum Geheimschrift				
-1480	Voynich Manuskript
-1586	Maria Stuart Geheimschrift - Babington-Komplott		
-1623	Bacon Code			
-1660	Grande Chiffre	
-1680	Gronsfeld Chiffre							
-1780	Zauberhandschrift (Kassel)		
-1794	Freimaurer Code		
-1854	Playfair Chiffre					
-1880	Nihilisten Substitution							
-1880	Nihilisten Transposition Chiffre			
 1. Weltkrieg:	
 1881	Fleissner Chiffre				
 1914	ABC Chiffre
