@@ -1,29 +1,17 @@
-			
-			
-							
-			
-
-		
-
-
-	
-
-								
-		
-	
-				
-
 1. Weltkrieg:	
-1913	Mexican Army Cipher Wheel					
-1913	Doppelter Spaltentausch Chiffre
+1881	Fleissner Chiffre				
 1914	ABC Chiffre
 1914	Pletts Scheibe
-1916	M-138 / CSP-845	Parker Hitt
-1917	Heberns Rotor-Chiffriermaschine
+1917    Zimmermann-Depesche
 1918	ADFGX Chiffre	
 1918	ADFGVX Chiffre		
+
+Zwischen den Kriegen
 1925	Kryha Chiffriermaschine
 1922	M-94 / CSP-488
+1916	M-138 / CSP-845	Parker Hitt
+1917	Heberns Rotor-Chiffriermaschine
+
 2. Weltkrieg		
 1932	Enigma Chiffriermaschine				
 1932	Geheimschreiber T52
