@@ -3,12 +3,18 @@
     font-size: 4vw;
     text-shadow: 6px 2px 6px rgba(0, 0,0, 0.5) ;
 }
-.text, .subtext{
+.text{
     margin-top: 0.5%;
     font-size: 1.1vw;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 450;
     word-break: break-word;
+}
+.text a{
+    color: black;
+}
+.text a:hover{
+    color: blue;
 }
 .subheading{
     font-size: 2vw;
@@ -68,11 +74,6 @@ body{
   .imgbox{
       margin-left: 3%;
   }
-  td, th {
-      border: 1pt solid black;
-      font-size: 1vw;
-      text-align: center;
-  }
   table{
       margin-top: 1%;
   }
@@ -83,9 +84,15 @@ body{
   }
   #tablepolybios td, #tablepolybios th{
     width: 5vw;
+    border: 1pt solid black;
+    font-size: 1vw;
+    text-align: center;
   }
   #tableatbash td, #tableatbash th{
     width: 7vw;
+    border: 1pt solid black;
+    font-size: 1vw;
+    text-align: center;
   }
   #CaeserDecode, #CaeserEncode{
       display: flex;
@@ -119,3 +126,13 @@ body{
   #caesertxt{
     margin-top: 0%;
   }
+  #txtakg{
+      width: 100%;
+  }
+  #imgstuart{
+      margin-top: 1%;
+  }
+  #imgfreimaurer{
+    margin-top: 1%;
+  }
+  
