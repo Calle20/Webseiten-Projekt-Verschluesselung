@@ -5,7 +5,8 @@
         <link rel="shortcut icon" type="image/x-icon" href="Medien/Icon/favicon.ico" />
         <link rel="icon" type="image/x-icon" href="Medien/Icon/favicon.ico" />
         <script src="js/CaeserVerschlüsselung.js"></script>
-        <script src="js/vigenere.js"></script>
+        <script src="js/VigenereVerschlüsselung.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <title>Anfänge symmetrische Verschlüsselung</title>
     </head>
     
@@ -64,39 +65,44 @@
 
             <h2 class="subheading">Vigenère-Verfahren</h2>
 
-            <p class="text">Das Vigenère-Verfahren ist ein polyalphabetisches Verschlüsselungsverfahren. Das heißt, ein Buchstabe wird mit verschiedenen Buchstaben verschlüsselt.Die Verschlüsselung ist nach Blaise de Vigenère (1523-1596) benannt, einem französischen Diplomaten und Kryptografen. Zum Ver-/Entschlüsseln benutzt man das sogenannte Vigenère-Quadrat. Hier ist das Alphabet 26-mal untereinander aufgeführt, wobei eine Zeile im Vergleich zur vorherigen immer eine Stelle nach links verschoben ist. Um einen Text zu verschlüsseln, sucht man in der ersten Zeile den ersten, zweiten, dritten,... Buchstaben des Schlüsselwortes und in der ersten Spalte den ersten, zweiten, dritten,... Buchstaben des Klartextes. Nun schaut man im Quadrat, wo sich die Spalte des Klartextbuchstabens und die Zeile des Schlüsselwortbuchstabens kreuzen. Das ist dann der verschlüsselte Geheimtext-Buchstabe. Wenn das Schlüsselwort zu Ende ist, beginnt man wieder mit dem ersten Buchstaben. Als das Chiffre erfunden wurde, benutzte man ein 24 Buchstaben umfassendes lateinisches Alphabet. Dementsprechend hatte das originale Vigenère-Quadrat nur 24 mal 24 Einträge. Das Quadrat mit dem modernen lateinischen Alphabet mit 26 Buchstaben wurde erstmals von Lewis Carroll 1868 veröffentlichte. Lange Zeit war das Vigenère-Verfahren ohne Schlüssel undechiffrierbar. Es wurde erst 1854 durch Charles Babbage geknackt. Da das Schlüsselwort wiederholt hintereinander verwendet wurde, wiederholten sich Buchstabenfolgen im verschlüsselten Text. Um dieses Problem zu verhindern, erfand Blaise de Vigenère später das Autokey Chiffre, das statt den Schlüssel zu wiederholen, den Klartext selbst als weiteren Schlüssel benutzt und so Wiederholungen des Schlüsselwortes vermeidet.
-            </p>
+            <p class="text">Das Vigenère-Verfahren ist ein polyalphabetisches Verschlüsselungsverfahren. Das heißt, ein Buchstabe wird mit verschiedenen Buchstaben verschlüsselt.Die Verschlüsselung ist nach Blaise de Vigenère (1523-1596) benannt, einem französischen Diplomaten und Kryptografen. Zum Ver-/Entschlüsseln benutzt man das sogenannte Vigenère-Quadrat. Hier ist das Alphabet 26-mal untereinander aufgeführt, wobei eine Zeile im Vergleich zur vorherigen immer eine Stelle nach links verschoben ist. Um einen Text zu verschlüsseln, sucht man in der ersten Zeile den ersten, zweiten, dritten,... Buchstaben des Schlüsselwortes und in der ersten Spalte den ersten, zweiten, dritten,... Buchstaben des Klartextes. Nun schaut man im Quadrat, wo sich die Spalte des Klartextbuchstabens und die Zeile des Schlüsselwortbuchstabens kreuzen. Das ist dann der verschlüsselte Geheimtext-Buchstabe. Wenn das Schlüsselwort zu Ende ist, beginnt man wieder mit dem ersten Buchstaben. Als das Chiffre erfunden wurde, benutzte man ein 24 Buchstaben umfassendes lateinisches Alphabet. Dementsprechend hatte das originale Vigenère-Quadrat nur 24 mal 24 Einträge. Das Quadrat mit dem modernen lateinischen Alphabet mit 26 Buchstaben wurde erstmals von Lewis Carroll 1868 veröffentlichte. Lange Zeit war das Vigenère-Verfahren ohne Schlüssel undechiffrierbar. Es wurde erst 1854 durch Charles Babbage geknackt. Da das Schlüsselwort wiederholt hintereinander verwendet wurde, wiederholten sich Buchstabenfolgen im verschlüsselten Text. Um dieses Problem zu verhindern, erfand Blaise de Vigenère später das Autokey Chiffre, das statt den Schlüssel zu wiederholen, den Klartext selbst als weiteren Schlüssel benutzt und so Wiederholungen des Schlüsselwortes vermeidet.</p>
 
-            <h3 class="subsubheading">Vigenère-Verschlüsselung ausprobieren</h3>
-
-            <div id="VigenereDecode">
-                <p class="text">Den Klartext </p>
-                <input class="textbox" id="vinboxde" name="textbox" type="text">
-                <p class="text">mit dem Schlüssel </p>
-                <input class="textbox" type="text" id="keyde" >
-                <input class="button" type="button" value="Verschlüsseln" onclick="doCrypt(true)">
-                <p class="text"> Verschlüsselter Text: </p>
-                <input class="textbox" type="text" id="vinoutputde">
+            <div data-aos="fade">
+                <h3 class="subsubheading">Vigenère-Verschlüsselung ausprobieren</h3>
+                
+                <div id="VigenereDecode">
+                    <p class="text">Den Klartext </p>
+                    <input class="textbox" id="vinboxde" name="textbox" type="text">
+                    <p class="text">mit dem Schlüssel </p>
+                    <input class="textbox" type="text" id="keyde">
+                    <input class="button" type="button" value="Verschlüsseln" onclick="doCrypt(true)">
+                    <p class="text"> Verschlüsselter Text: </p>
+                    <input class="textbox" type="text" id="vinoutputde">
+                </div>
+                
+                <div id="VigenereEncode">
+                    <p class="text">Den verschlüsselten Text </p>
+                    <input class="textbox" id="vinboxen" name="textbox" type="text">
+                    <p class="text">mit dem Schlüssel </p>
+                    <input class="textbox" class="textbox" type="text" id="keyen">
+                    <input class="button" type="button" value="Entschlüsseln" onclick="doCrypt(false)">
+                    <p class="text"> Klartext: </p>
+                    <input class="textbox" type="text" id="vinoutputen">
+                </div>
             </div>
-            
-            <div id="VigenereEncode">
-                <p class="text">Den verschlüsselten Text </p>
-                <input class="textbox" id="vinboxen" name="textbox" type="text">
-                <p class="text">mit dem Schlüssel </p>
-                <input class="textbox" class="textbox" type="text" id="keyen" >
-                <input class="button" type="button" value="Entschlüsseln" onclick="doCrypt(false)">
-                <p class="text"> Klartext: </p>
-                <input class="textbox" type="text" id="vinoutputen"> 
-            </div>
 
-            <div class="media-container" style="margin-bottom: 1%;">
+            <div class="media-container last_element" data-aos="fade">
                 <img src="Medien/Bilder/Vigenere_Quadrat155655.jpg" width="35%">
                 <video controls="controls" data-aspect="16x9" width="61%"> 
                     <source src="Medien/Videos/Symmetrische Verschlüsselungen.mp4" type="video/mp4" />
                     <track src="Medien/Videos/Symmetrische Verschlüsselungen.mp4" kind="captions" label="An" />
                 </video>
             </div>
-
         </div>
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
     </body>
 </html>
