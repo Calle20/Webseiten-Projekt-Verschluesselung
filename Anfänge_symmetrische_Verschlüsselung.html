@@ -21,16 +21,16 @@
                    
                    <p class="text"> Bei einer symmetrischen Verschlüsselung erfolgen Chiffrierung und Dechiffrierung mit ein und dem selben Schlüssel. Das heißt, sowohl Sender und Empfänger müssen den gemeinsamen Schlüssel besitzen. Damit Dritte die chiffrierten Informationen nicht entschlüsseln können, wird der Schlüssel geheim gehalten.  Daher spricht man bei symmetrischen Verschlüsselungen von einem Private-Key-Verfahren.</p>
                 
-                   <h2 class="subheading">Caeser-Verschlüsselung</h2>
+                   <h2 class="subheading">Caesar-Verschlüsselung</h2>
                    
-                   <p class="text">Bei der Caeser-Verschlüsselung handelt es sich um eine monoalphabetische Verschlüsselung, dass heißt ein Buchstabe wird immer mit dem selben Buchstaben verschlüsselt. Das Schlüsselalphabet ist in diesem Fall das lateinische Alphabet. Um den Geheimtext zu erhalten, wird jeder Buchstaben um eine bestimmte Anzahl an Buchstaben verschoben. Ist das Alphabet zu Ende, wird wieder von vorne begonnen. Caeser wählte die Verschiebung 3. Es ist aber jede beliebige Zahl möglich. Um den Geheimtext wieder zu entschlüsseln muss man</p>
+                   <p class="text">Bei der Caesar-Verschlüsselung handelt es sich um eine monoalphabetische Verschlüsselung, dass heißt ein Buchstabe wird immer mit dem selben Buchstaben verschlüsselt. Das Schlüsselalphabet ist in diesem Fall das lateinische Alphabet. Um den Geheimtext zu erhalten, wird jeder Buchstaben um eine bestimmte Anzahl an Buchstaben verschoben. Ist das Alphabet zu Ende, wird wieder von vorne begonnen. Caesar wählte die Verschiebung 3. Es ist aber jede beliebige Zahl möglich. Um den Geheimtext wieder zu entschlüsseln muss man</p>
                 </div>                
                 <img src="Medien/Bilder/symm_Chiffriersysteme_2155647.png" width="35%" id="imgsymm" class="imgbox">
             </div>
             
-            <p class="text" id="caesertxt">die Buchstaben in die andere Richtung verschieben. Wenn man also den Buchstaben A um 3 Stellen verschiebt, erhält man das D. Um wieder zum A zu gelangen, verschiebt man vom D einfach 3 Stellen zurück und kommt somit wieder auf den Klartextbuchstaben. Die Verschlüsselung ist nicht besonders sicher, da man einfach alle 25 Möglichkeiten durchprobieren kann. Die Sicherheit des Verfahrens basierte zu Zeiten Caesars darauf, dass es vollkommen unbekannt war. Heute ist die Caeser-Verschlüsselung auch als ROT bekannt.</p> 
+            <p class="text" id="caesertxt">die Buchstaben in die andere Richtung verschieben. Wenn man also den Buchstaben A um 3 Stellen verschiebt, erhält man das D. Um wieder zum A zu gelangen, verschiebt man vom D einfach 3 Stellen zurück und kommt somit wieder auf den Klartextbuchstaben. Die Verschlüsselung ist nicht besonders sicher, da man einfach alle 25 Möglichkeiten durchprobieren kann. Die Sicherheit des Verfahrens basierte zu Zeiten Caesars darauf, dass es vollkommen unbekannt war. Heute ist die Caesar-Verschlüsselung auch als ROT bekannt.</p> 
             
-            <h3 class="subsubheading">Caeser-Verschlüsselung ausprobieren</h3>
+            <h3 class="subsubheading">Caesar-Verschlüsselung ausprobieren</h3>
             
             <div id="CaeserDecode">
                 <p class="text">Den Klartext </p>
@@ -102,7 +102,9 @@
 
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
-          AOS.init();
+          AOS.init({
+            easing:"ease-in-out-cubic"
+          });
         </script>
     </body>
 </html>

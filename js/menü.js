@@ -34,7 +34,6 @@ document.write(
           "            </div>",
           "            <p><a href=\"Asymmetrische_Verschlüsselung.html\" class=\"p\">Asymmetrische Verschlüsselung</a></p>",
           "            <p><a href=\"Passwörter.html\" class=\"p\">Verschlüsseln von Passwörtern</a></p>",
-          "            <p><a href=\"Quantenkryptographie.html\" class=\"p\">Quantenkryptographie</a></p>",
           "            <p><a href=\"impressum.html\" class=\"p\">Impressum</a></p> ",
           "            <p class=\"menuside\">Menü</p>",
           "        </div>        ",

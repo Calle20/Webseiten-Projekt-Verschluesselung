@@ -10,10 +10,10 @@
     font-weight: 450;
     word-break: break-word;
 }
-.text a{
+a{
     color: black;
 }
-.text a:hover{
+a:hover{
     color: blue;
 }
 .subheading{
