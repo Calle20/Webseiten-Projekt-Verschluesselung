@@ -10,7 +10,279 @@
     <body>
         <script type="text/javascript" src="js/menü.js"></script>
         <div class="content">
+            <h1 class="mainheading">Enigma</h1>
+            
+            <p class="text">Eine der bekanntesten und wichtigsten Chiffriermaschinen der Deutschen aus dem 2. Weltkrieg ist die Enigma (<i>griechisch: Rätsel</i>). Sie wurde in den frühen 1920er Jahren von Arthur Scherbius entwickelt und ist eine Rotor-Chiffriermaschine <a href="https://de.wikipedia.org/wiki/Rotor-Chiffriermaschine" target="_blank">(Wikipedia)</a>. Sie wurde vorallem im 2. Weltkrieg zur Verschlüsselung des Funkverkehrs des deutschen Militärs verwendet. Es wird vermutet, dass mehr als 40.000 Chiffriermaschinen des Typs Enigma hergestellt wurden, wobei die gebräuchlichste die Enigma I war.</p>
+
+            <h2 class="subheading">Aufbau</h2>
+
+            <p class="text">Eine Enigma bestand aus der Tastatur zur Buchstabeneingabe, fünf Walzen, von denen drei austauschbar waren, und einem Glühlampenfeld zur Anzeige. Die Walzen sind drehbar nebeneinander gelagert und haben auf beiden Seiten 26 elektrische Kontakte. Diese Kontakte sind mit isolierten Drähten unregelmäßig innerhalb der Walze paarweise miteinander verbunden. Damit der Code schwerer zu knacken war, verwendete man jeden Tag unterschiedliche Walzen, in denen die Buchstaben anders vertratet waren. 
+                
+                Drückt man eine Buchstabentaste, so fließt elektrischer Strom von einer in der Enigma befindlichen Batterie über die gedrückte Taste durch Steckerbrett und Walzensatz und lässt eine Anzeigelampe aufleuchten. Der aufleuchtende Buchstabe entspricht der Verschlüsselung des gedrückten Buchstabens. Da sich bei jedem Tastendruck die Walzen um ein Stück weiterdrehen, ändert sich das geheime Schlüsselalphabet nach jedem Buchstaben, was einem polyalphabetischen Substutionsverfahren entspricht.
+                
+                Als Zusatzgerät zur Enigma I der Luftwaffe wurde 1944 die Enigma-Uhr eingeführt, die an das Steckerbrett der Enigma angeschlossen wurde und mit dessen Drehschalter man 40 unterschiedliche Buchstabenvertauschungen einstellen konnte. Der Einsatz der Uhr war aber eher selten.
                
+                Verwendung und Entzifferung der Enigma im 2. Weltkrieg
+                Es wird davon ausgegangen, dass die Deutschen von der Sicherheit der Engima überzeugt waren und davon, dass niemand anderes damit verschlüsselte Funksprüche entschlüsseln könnte. Das die Briten im Bletchley Park die Maschine zwischenzeitlich geknackt hatten, wusste sie nicht. Wahrscheinlich ließ man sich die komplexen Vorgänge in der Maschine täuschen und nahm an, dass diese ein Mensch nicht brechen könnte. Das andere Maschinen dies übernehmen würden, damit hatte man nicht gerechnet. Erst gegen Ende des Krieges wurde über eine Ablösung der Enigma durch das Schlüsselgerät 41 nachgedacht.
+                
+                Trotz der Verbesserung der Enigma während des Krieges gelang es den den Alliierten die deutschen mit der Enigma erstellten Funksprüche zu entziffern. Bereits 1932 fielen Frankreich durch den deutschen Spion Hans-Thilo Schmidt ausgehändigten geheime Schlüsseltafeln, Gebrauchsanleitung (H.Dv.g. 13), Schlüsselanleitung (H.Dv.g. 14) in die Hände, doch konnte sie die Enigma nicht brechen. Also gaben sie die Erkenntnisse an die alliierten Briten und Polen weiter. Auch die Briten bissen sich zu der Zeit noch die Zähne an ihr aus.
+                
+                Dem polnischen Mathematiker Marian Rejewski allerdings gelang 1932 der erste Einbruch in die Enigma. Dazu nutze er eine legal gekaufte Maschine (wahrscheinlich Modell C) und erriet die Verdrahtungsreihenfolge der militärischen Variante. Anschließend gelang es ihm mit Kenntnissen der Permutationstheorie auch die Verdrahtung der drei Walzen (I, II, III) sowie der Umkehrwalze zu eruieren.
+                
+                Eine Besonderheit, die eigentlich die Sicherheit der Enigma erhöhen sollten, erleichterte die Dechiffrierung ungewollt: die Enigma ersetzte einen Klartextbuchstaben niemals durch denselben Geheimtextbuchstaben, dafür sorgte das Prinzip der Umkehrwalze (Reflektor). So konnte aus einem A jeder beliebige Buchstabe werden, nur kein A. Das kann man sich bei der Kryptoanalyse zunutze machen, wenn man genau weiß, dass ein bestimmter Teiltext verschlüsselt wurde. Man setzt dabei den bekannten Klartextteil (auch crib genannt) unter das Chiffrat. Stehen nun zwei gleiche Buchstaben untereinander, ist diese Verschlüsselung unmöglich und man verschiebt den Text solange um eine Position nach rechts, bis es keine Buchstabenüereinstimmungen mehr gibt. Dadurch hat man eine Möglichkeit gefunden, welche Klartextbuchstabenfolge zu einer Geheimtextbuchstabenfolge kodiert wird und damit auch einen möglichen Schlüssel für diesen Teil. Je länger der Klartextteil ist, desto wenige Möglichkeiten werden sich ergeben.
+                
+                Zudem gab es einige besondere Vorschriften beim Umgang mit der Engima, die ganz ähnlich die Sicherheit erhöhen sollten, aber das Gegenteil bewirkten, weil sie den Schlüsselraum einschränkten: Es mussten sich die Positionen für jede Walze mit jedem Tag ändern. War also die Walzenlage heute 123, so waren für morgen die Walzenlagen 123, 132, 321, 213 verboten. Es blieben demnach nur noch 231 und 312 übrig. Auch durften auf dem Schlüsselbrett Buchstaben nicht mit benachbarten Buchstaben verbunden werden, also z. B. das R weder mit S noch mit T.
+                
+                Zur Entschlüsselung von Funksprüchen kam den polnischen Kryptoanlytikern ein weiterer Fehler der Deutschen zur Hilfe. Die stellten den Spruchschlüssel der Nachricht doppelt voran, um eine fehlerfreie Übertragung zu gewährleisten, übersahen dabei aber, dass dadurch der 1. und 4., der 2. und 5., sowie der 3. und 6. Geheimtextbuchstabe jeweils demselben Klartextbuchstaben zuzuordnen war.
+                
+                Mithilfe zweier speziell für die Entschlüsselung der Enimga gebauter Maschinen namens Zyklometer und Bomba, die zwei beziehungsweise dreimal zwei hintereinander geschaltete und um jeweils drei Drehpositionen versetzte Enigma-Maschinen verkörperten, konnten die polnischen Kryptoanalytiker für jede der sechs möglichen Walzenlagen feststellen, bei welchen Walzenstellungen die beobachtete Zuordnung der Buchstabenpaare möglich war und so den Suchraum erheblich einengen. Nach Analyse mehrerer Funksprüche war dann der korrekte Spruchschlüssel gefunden.
+                
+                Im September 1938 führten die Deutschen zwei weitere Walzen (IV und V) ein, wodurch sich der Schlüsselraum vergrößerte und die Enigma vorerst wieder sicher war. Im Juli 1939, zwei Monate, bevor Hitler Polen überfallen sollte, teilten die Polen ihr Wissen mit den Briten und Franzosen, u. a. auch, das die Verdrahtung zwischen Tastenfeld und Walzen der Enigma schlicht QWERTZU <--> ABCDEFG lautete.
+                
+                Im britischen Bletchley Park wurde der nächste Angriff gegen die Enigma entwickelt, die sogenannte Turing-Bombe, die auf der polnischen Bomba aufbaute und nach seinem Entwickler Alan Turing benannt war. Sie bestand aus der Hintereinanderschaltung von dreimal zwölf Walzensätzen der Enigma.
+                
+                Dem täglich wechselnden Schlüssel der Enigma kam man durch einen weiteren Fehler der Deutschen auf die Schliche. So gab es einen täglichen Funkspruch, der im Klartext immer mit "WETTERVORHERSAGEBEREICHSIEBEN" begann. Aus dem abgefangenen Geheimtext und dem Wissen über den Klartext konnte man den Schlüssel errechnen, der auch für andere Funksprüche galt, wo man ihn dann anwenden konnte und auch diese Funksprüche entziffern. Wollte man auf die wiederholenden Funksprüche nicht warten, so provozierte man sie einfach, z. B. indem die Royal Air Force Minen abwarf. Die Minenwarnmeldung der Deutschen ließ dann nicht lange auf sich warten.
+                
+                Die Enigma Variante M3, eingesetzt bei der deutschen Kriegsmarine benutzte 3 aus 8 Walzen (I bis VIII) und bot einen noch größeren Schlüsselraum. Hier gelang den Briten der Einbruch erstmals im Mai 1941 nach Kaperung des U-Bootes U 110 und Erbeutung einer intakten M3-Enigma sowie sämtlicher Geheimdokumente.
+                
+                Im Februar 1942 wurde die M3 dann durch die M4 abgelöst, die über vier statt drei Walzen verfügte, was die Allierten wieder zurückwarf. Zehn Monate konnten solle Nachrichten nicht entschlüsselt werden können, bis zum 12. Dezember 1942. Zuvor, am 30. Oktober 1942, wurde das deutsche U-Boot U559 geentert und wichtige Geheimunterlagen zur Enigma M4 erbeutet.
+                
+                Ab April 1943 traten die US-Amerikaner den Kryptoanalysten bei und steuerten 120 Hochgeschwindigkeitsvarianten der Turing-Bombe bei, die speziell gegen die Enigma M4 gerichtet waren. Bis Kriegsende war fortan kein deutsches U-Boot mehr sicher.
+                
+                Es zeigt sich, dass das Knacken der Enigma von enormer strategischer Bedeutung für den Verlauf des 2. Weltkriegs war. Einige Historiker schätzen, dass dadurch der Krieg um mindestens zwei Jahre verkürzt werden konnte. Andere halten es für nicht ausgeschlossen, dass Nazi-Deutschland nicht doch noch den Krieg hätte gewinnen können, wäre die Enigma nicht geknackt worden.
+                Aufbau
+                Eine Enigma besteht aus:
+                Tastatur zur Eingabe eines Zeichens
+                Lampenfeld zum Ablesen des Ergebniszeichens
+                Steckerbrett, um Buchstaben zu vertauschen
+                3-4 Walzen, die nebeneinander angeordnet werden und durch ihre interne Verdrahtung Buchstaben vertauschen
+                einem Getriebe, dass die Walzen nach jedem Tastendruck in einem bestimmten Muster fortbewegt
+                einer Batterie, die einen Stromfluss ermöglicht, der sich ergibt aus gedrückter Taste, Verkabelung des Steckerbretts und welche Walze sich an welchen Stelle befindet.
+                Walzen
+                
+                Die flachen Walzen haben auf der rechten Seite 26 Stifte (für die Buchstaben A bis Z) und auf der linken Seite 26 Schleiffelder, welche elektrisch leitfähig sind. Die Walzen sind in der Enigma so nebeneinander platziert, dass die Stifte auf den Feldern aufliegen und so eine elektrische Verbindung darstellen.
+                
+                In einer Walze sind die Stifte mit den Feldern elektrisch verdrahtet, so das ein rechts eingehender Strom an einer anderen Stellen auf der linken Seite wieder herauskommt und ein links eingehender Strom an der rechten Seite ebenfalls woanders.
+                
+                Die Walzen sind auf folgende Art verdrahtet:
+                Walze No. I
+                A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
+                E K M F L G D Q V Z N T O W Y H X U S P A I B R C J 
+                
+                Walze No. II
+                A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
+                A J D K S I R U X B L H W T M C Q G Z N P Y F V O E 
+                    
+                Walze No. III
+                A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
+                B D F H J L C P R T X V Z N Y E I W G A K M U S Q O 
+                    
+                Walze No. IV
+                A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
+                E S O V P Z J A Y Q U I R H X L N F T G K D C M W B 
+                    
+                Walze No. V
+                A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
+                V Z B R G I T Y U P S D N H L X A W M J Q O F E C K 
+                    
+                Walze No. VI
+                A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
+                J P G V O U M F Y Q B E N H Z R D K A S X L I C T W 
+                    
+                Walze No. VII
+                A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
+                N Z J H G R C X M Y S W B O U F A I V L P E K Q D T 
+                    
+                Walze No. VIII
+                A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
+                F K Q H T L X O C B J S P D Z R A M E W N I U Y G V 
+                
+                Walze beta (M4)
+                A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
+                L E Y J V C N I X W P B Q M D R T A K Z G F U H O S 
+                
+                Walze gamma (M4)
+                A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
+                F S O K A N U E R H M B T I Y C W L Q P Z X V G J D 
+                
+                Rechts neben den 3 Hauptwalzen befindet sich eine feste Eintrittswalze, die widerum fest mit dem Tastenfeld verdrahtet ist. Links neben den 3 Hauptwalzen befindet sich die Umkehrwalze (wechselbar), die nur eine elektrisch leitende Seite hat. Intern enthält sie 13 Verbindungen, die die 26 Anschlüsse auf der rechten Seite miteinander verbindet.
+                Schematischer Verlauf des Stromes in der Enigma
+                Beim Druck auf eine Taste wird der Strom zuerst durch das Steckerbrett geleitet und nimmt, so der entsprechende Buchstabe gesteckt ist, eine Umleitung. Das Steckerbrett ist einer bestimmten Weise fest mit der Eintrittswalze verdrahtet, die den Strom zur 1. Walze auf dessen rechten Seite weiterleitet. Durch die interne Verdrahtung tritt der Strom an einer anderen Position an der linken Seite wieder aus. Auf die selbe Art und Weise durchläuft der Strom Walze 2 und 3. Die linke Seite der 3. Walze gibt den Strom dann an die Umkehrwalze weiter.
+                
+                Die Besonderheit der Umkehrwalze ist, den Strom nicht nach links weiterzureichen, sondern ihn auf der selben Seite (rechts) an einer anderen Position wieder auszugeben. So tritt der Strom wieder an der linken Seite von Walze 3 auf. In Walze 3 ergibt sich für den Rückweg nun eine andere Verdrahtung als für den Hinweg und der Strom tritt auf der rechten Seite wieder aus und wird dann durch Walze 2 und 1 wieder in die Eintrittswalze geleitet. Dort tritt er rechts wieder aus, durchläuft das Steckerbrett und bringt dann eine Lampe im Lampenfeld zum leuchten.
+                
+                Bei jedem einzelnen Tastendruck erfolgt eine Weiterdrehung der rechten Walze (Schema Walze 1). Auf den Walzen sind Übertragskerben vorhanden, die an dieser Stelle angekommen, die links benachbarte Walze ebenfalls um eine Position weiterdrehen. Man kann sich das wie einen alten, analogen Kilometerzähler vorstellen, nur mit dem Unterschied, dass die Weiterschaltungen nicht gleichmäßig alle 10, sondern willkürlich an bestimmten Stellen sind.
+                
+                Für die Umkehrwalzen gilt folgende Verdrahtung:
+                UKW A
+                AE  BJ  CM  DZ  FL  GY  HX  IV  KW  NR  OQ  PU  ST
+                
+                was folgendes Schlüsselalphabet ergibt:
+                    
+                A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
+                E J M Z A L Y X V B W F C R Q U O N T S P I K H G D
+                
+                UKW B
+                AY  BR  CU  DH  EQ  FS  GL  IP  JX  KN  MO  TZ  VW
+                
+                A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
+                Y R U H Q S L D P X N G O K M I E B F Z C W V J A T
+                
+                
+                UKW C
+                AF  BV  CP  DJ  EI  GO  HY  KR  LZ  MX  NW  QT  SU
+                
+                A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+                F V P J I A O Y E D R Z X W G C T K U Q S B N M H L 
+                
+                UKW B schmal
+                
+                A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
+                E N K Q A U Y W J I C O P B L M D X Z V F T H R G S 
+                
+                UKW C schmal
+                
+                A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+                R D O B J N T K V E H M L F C W Z A X G Y I P S U Q 
+                Die Weiterschaltungspositionen der Walzen sind:
+                Walze No. I
+                Pos. 17 (Q)
+                
+                Walze No. II
+                Pos. 5 (E)
+                    
+                Walze No. III
+                Pos. 22 (V)
+                    
+                Walze No. IV
+                Pos. 10 (J)
+                    
+                Walze No. V
+                Pos. 26 (Z)
+                    
+                Walze No. VI
+                Pos. 26 und Pos. 13 (Z und M)
+                
+                Walze No. VII
+                Pos. 26 und Pos. 13 (Z und M)	
+                
+                Walze No. VIII
+                Pos. 26 und Pos. 13 (Z und M)
+                
+                Die Walzen der Abwehr-Enigma besitzen hingegen Nocken und Nuten in höherer Anzahl (siehe Foto).
+                
+                Durch Auswahl der Walzen und deren Anordnung ist der Weg des Stromes jedesmal anders. Die Verdrahtung der Walzen ist sozusagen ein fester Schlüssel, während die Anordnung der Walzen und deren Anfangsposition ein variabler Schlüssel ist, der für jeden Funkspruch geändert werden konnte. Ein weiterer "fester" Schlüssel ist die Verdrahtung der rechten Eintrittswalze mit der Tastatur (bzw. dem Steckerbrett) und die Verdrahtung der Umkehrwalze, sowie die Weiterschaltungspositionen.
+                
+                Bedienung
+                Bei der Enigma I standen zunächst drei, ab 1939 fünf unterschiedliche Walzen zur Verfügung, die mit römischen Zahlen durchnummeriert waren. Der Bediener wählte nach einer geheimen Schlüsseltabelle täglich wechselnd drei der fünf Walzen aus und setzte diese nach der im Tagesschlüssel unter der Überschrift Walzenlage vorgeschriebenen Anordnung ein.
+                Tag  Walzenlage  Ringstellung  ---- Steckerverbindungen ----
+                 29  I   IV III    16 26 08    AD CN ET FL GI JV KZ PU QY WX
+                 30  II  V  I      18 24 11    BN DZ EP FX GT HW IY OU QV RS
+                 31  III I  IV     01 17 22    AH BL CX DI ER FK GU NP OQ TY
+                Angenommen, es wäre der 29., so würde als linke Walze die No. I, als mittlere Walze die No. IV und als rechte Walze die No. III eingelegt. Als Umkehrwalze wurde mit wenigen Ausnahmen stets die UKW B benutzt. Als Nächstes würden die Ringstellungen (16, 26, 08) eingestellt und zwar an den Walzen von links nachs rechts. Die linke Walze also auf 16 bzw. P, die mittlere auf 26 bzw. Z und die rechte auf 8 bzw. H. Wenn die Ringstellung auf den Walzen nicht als Ziffern, sondern als Buchstaben angegeben war, so half eine Übersetzungstabelle im Gehäusedeckel der Enigma:
+                 A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z
+                01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26
+                Zum Abschluss der Vorbereitungen mussten noch die Buchstaben "gesteckert" werden. "AD CN ET FL GI JV KZ PU QY WX" war wie folgt zu lesen: Verbinde Buchse A mit Buchse D mit einem Kabel, Verbinde Buchse C mit Buchse N usw. usf. In der Regel wurden genau 10 Kabel eingesteckt. Die jeweils obere Buchse eines Buchsenpaars hat einen etwas größeren Durchmesser (4 mm) als die untere (3 mm), so dass die Stecker nur in einer Orientierung eingesteckt werden konnten. So wurde die gewünschte elektrische Überkreuzung und damit die Vertauschung der beiden Buchstaben gesichert. Die Tatsache, das regelmäßig 20 Buchstaben verbunden und 6 unverbunden waren, oder das es verboten war, zwei im Alphabet aufeinanderfolgende Buchstaben miteinander zu steckern, war übrigens ein guter Anhaltspunkt für Codeknacker.
+                
+                Danach schloss der Bediener die Walzen- und Frontklappe. Dadurch wurde die Stecker fest angedrückt und eine korrekte Kontaktgabe gewährleistet. Außerdem wurde so ein Ausspähen der Ringstellungen verhindert. Nun mussten nur noch die Walzen von außen in die richtigen Anfangsstellung gebracht werden und die Enigma war bereit für Ver- und Entschlüsselung.
+                
+                Die Anfangsstellung der Walzen (je ein Buchstaben pro Walze) wurde auch als Grundstellung oder Spruchschlüssel bezeichnet. Bei den Deutschen war vorgeschrieben, dass jeder Funkspruch seinen eigenen Spruchschlüssel zu haben hat. War dieser eingestellt, wurde danach die Nachricht Buchstabe für Buchstabe getastet und die aufleuchtenden Buchstaben als Geheimtext notiert. Entsprechend verfuhr der entschlüssende Bediener, indem er die Buchstaben des Geheimtextes tastete und die aufleuchtenden Buchstaben als Klartext notierte.
+                Praktische Anwendung bei den Deutschen (Beispiel-Funkspruch)
+                Bei den Deutschen gab es ein paar Vorschriften, wie mit der Engima praktisch zu verschlüsseln war:
+                Zahlen werden in Ziffern zerlegt. Ziffern werden ausgeschrieben. Nach einer Ziffer wird ein X angehängt, z. B. "SIEBENXZWEIX" für 72.
+                Umlaute sind zu ersetzen durch AE, OE, UE, SZ
+                Es wird nicht zwischen Groß- und Kleinschreibung unterschieden. Alle Buchstaben sind groß zu schreiben.
+                Leerzeichen werden weggelassen, Satzzeichen und alle sonstigen Zeichen außer A bis Z werden durch ein X gekennzeichnet.
+                Eigennamen werden verdoppelt und in X eingeschlossen.
+                "ch" und "ck" werden üblicherweise (außer in Eigennamen) durch "Q" ersetzt.
+                Der Text wird zur besseren Lesbarkeit in Fünfergruppen (Heer) bzw. Vierergruppen (Marine) geschrieben.
+                So wird aus dem Text (aus Gründen der Vergleichbarkeit wie bei Wikipedia)
+                Das Oberkommando der Wehrmacht gibt bekannt: Aachen ist gerettet. Durch gebündelten Einsatz der Hilfskräfte konnte die Bedrohung abgewendet und die Rettung der Stadt gegen 18:00 Uhr sichergestellt werden.
+                DASOB ERKOM MANDO DERWE HRMAQ TGIBT BEKAN NTXAA CHENX AACHE
+                NXIST GERET TETXD URQGE BUEND ELTEN EINSA TZDER HILFS KRAEF
+                TEKON NTEDI EBEDR OHUNG ABGEW ENDET UNDDI ERETT UNGDE RSTAD
+                TGEGE NXEIN SXAQT XNULL XNULL XUHRS IQERG ESTEL LTWER DENX
+                Es gab ein Codebuch, in dem für jeden Tag eine andere Schlüsseleinstellung notiert war, der sogenante Tagesschlüssel, etwa:
+                Tag  Walzenlage  Ringstellung  ---- Steckerverbindungen ----
+                 29  I   IV III    16 26 08    AD CN ET FL GI JV KZ PU QY WX
+                 30  II  V  I      18 24 11    BN DZ EP FX GT HW IY OU QV RS
+                 31  III I  IV     01 17 22    AH BL CX DI ER FK GU NP OQ TY
+                War etwa der 29. des Monats, wurde die Walzenlage I, IV, III benutzt. Das entspricht 143 für das Entschlüsselungstool unten. Außerdem war die Ringstellung angegeben, die hier 16, 26, 08 ist (Tool: "16 26 08" oder "PZH"). Auch waren die zehn Steckerverbindungen genannt, die ebenso eingestellt wurden (im Tool so anzugeben).
+                
+                Sind diese Einstellungen gemacht, kommen zwei weiterere, je 3 Buchstaben lange, Schlüsselbestandteile hinzu, der sich für jeden Funkspruch ändern, und die sich der Funker ausdenkt:
+                Die temporäre Grundstellung. Hierfür wollen wir mal "QWE" nehmen
+                Der Spruchschlüssel. Nehmen wir hier "RTZ"
+                Die beiden Buchstabenkombinationen sollten möglichst frei und zufällig vom Bediener ersonnen werden. Hier machten es sich aber wohl einige Funker einfach und wählten stets "ABC" oder dergleichen, was das Knacken der Schlüssel für den Feind vereinfachte.
+                
+                Als erstes wird die temporäre Grundstellung QWE an der Enigma eingestellt. Damit sind alle Einstellungen getan und sie ist zur Verschlüsselung des Spruchschlüssels bereit.
+                
+                Danach wird der Spruchschlüssel RTZ einmal mit den gemachten Einstellungen durch die Enigma verschlüsselt und man erhält den verschlüsselten Spruchschlüssel "EWG", nennen wir ihn Funktripel.
+                
+                Wer das Beispiel einmal unten im Solver durchspielen will, die Parameter dafür sind B143,16 26 08,QWE,AD CN ET FL GI JV KZ PU QY WX und der Text ist RTZ. Das Ergebnis sollte der Funktripel "EWG" sein.
+                
+                Danach wird die Enigma zurückgestellt, die Grundstellung auf den "echten" Spruchschlüssel "RTZ" eingestellt und der eigentliche Funktext ("Das Oberkommando...") verschlüsselt (Parameter für das Tool: B143,16 26 08,RTZ,AD CN ET FL GI JV KZ PU QY WX). Das Chiffrat lautet dann:
+                LJPQH SVDWC LYXZQ FXHIU VWDJO BJNZX RCWEO TVNJC IONTF QNSXW
+                ISXKH JDAGD JVAKU KVMJA JHSZQ QJHZO IAVZO WMSCK ASRDN XKKSR
+                FHCXC MPJGX YIJCC KISYY SHETX VVOVD QLZYT NJXNU WKZRX UJFXM
+                BDIBR VMJKR HTCUJ QPTEE IYNYN JBEAQ JCLMU ODFWM ARQCF OBWN
+                Der Empfänger hatte natürlich auch ein Codebuch mit den Walzenlagen. Ihm sind aber weder die Grundstellung noch der Spruchschlüssel bekannt. Außerdem kann es um Mitternacht herum Unklarheiten geben, welcher Tag denn jetzt genau gelten soll für das Codebuch. Also wurden diese Angaben an den Anfang des Funkspruches, den sogenannten Funkkopf geschrieben, und zwar im Format
+                [Uhrzeit 4stellig] - [Spruchlänge in Zeichen] - [Grundstellung][Funktripel]
+                in unserem Fall also
+                2220 - 204 - qweewg
+                Eventuell wurden noch Kürzel vorangestellt, z. B. "kr - " für kriegswichtig.
+                
+                Als nächstes sucht der Funker aus der Kenngruppentabelle, einem weiteren Verzeichnis, die für diesen Tag gültigen Kenngruppenbuchstaben heraus. Diese dienen nicht der Verschlüsselung, sondern mehr der Authentifizierung. Die Kenngruppenbuchstaben gehören zu einer Empfängergruppe und der Empfänger kann daran erkennen, dass die Nachricht auch für ihn bestimmt ist und entschlüsselt werden darf. Auch dies ist ein Tripel, z. B. "NOW".
+                
+                Um die Kenngruppenbuchstaben zu verschleiern, werden deren 3 Buchstaben durcheinandergewürfelt und dann werden zwei zufällige Buchstaben vorangestellt. Aus "NOW" wird dann etwa "XYOWN", nennen wir diesen Teil Funkquinte. Diese Funkquinte wurde dann dem Chiffrat vorangestellt. Zusammen mit dem Funkkopf sieht der Funkspruch dann so aus:
+                2220 - 204 - qweewg
+                  
+                XYOWN LJPQH SVDWC LYXZQ FXHIU VWDJO BJNZX RCWEO TVNJC IONTF QNSXW
+                ISXKH JDAGD JVAKU KVMJA JHSZQ QJHZO IAVZO WMSCK ASRDN XKKSR
+                FHCXC MPJGX YIJCC KISYY SHETX VVOVD QLZYT NJXNU WKZRX UJFXM
+                BDIBR VMJKR HTCUJ QPTEE IYNYN JBEAQ JCLMU ODFWM ARQCF OBWN
+                Normalerweise wurde der Funkspruch gemorst. Der Empfänger notiert sich die Zeichen und überprüft dann, ob die übermittelte Spruchlänge stimmt und nicht irgendwelche Zeichen im atmosphärischen Rauschen untergingen. Dann wirft er einen Blick auf die Funkquinte am Anfang mit der Kenngruppe und überprüft, ob die Nachricht auch für seine Abteilung bestimmt ist.
+                
+                Die Enigma des Empfängers ist bereits mit den Tageseinstellungen laut Codebuch eingestellt. Was ihm noch fehlt, ist der richtige Spruchschlüssel für die Grundstellung. Aber er hat ja die temporäre Grundstellung (QWE) und das Funktripel (EWG) aus dem unverschlüsselten Funkkopf. Also stellt er die Grundstellung auf "QWE" und entschlüsselt den Text "EWG" (Tool-Parameter B143,16 26 08,QWE,AD CN ET FL GI JV KZ PU QY WX) und erhält "RTZ", den richtigen Spruchschlüssel, den er sofort als Grundstellung einstellt. Nach Rückstellung auf Anfansposition der Enigma kann er dann das übermittelte Chiffrat (ohne die ersten fünf Zeichen) entschlüsseln (Tool-Parameter B143,16 26 08,RTZ,AD CN ET FL GI JV KZ PU QY WX) zu
+                DASOB ERKOM MANDO DERWE HRMAQ TGIBT BEKAN NTXAA CHENX AACHE
+                NXIST GERET TETXD URQGE BUEND ELTEN EINSA TZDER HILFS KRAEF
+                TEKON NTEDI EBEDR OHUNG ABGEW ENDET UNDDI ERETT UNGDE RSTAD
+                TGEGE NXEIN SXAQT XNULL XNULL XUHRS IQERG ESTEL LTWER DENX
+                Hinweis zum Tool: Den händischen Zwischenschritt mit dem Entschlüsseln des Spruchschlüssels können Sie im Tool automatisch durchführen lassen, indem sie als Grundstellung die 6-stellige Buchstabenkombination aus dem Funkkopf (temporäre Grundstellung und Funktripel, siehe oben) angeben, also für dieses Beispiel B143,16 26 08,qweewg,AD CN ET FL GI JV KZ PU QY WX. Beim Chiffrat geben Sie die 5 Kenngruppenbuchstaben am Anfang mit an, also den ganzen Spruch ohne Kopfzeile. Diese Kenngruppenbuchstaben werden durch das Tool automatisch vor der Entschlüsselung entfernt.
+                
+                Modellvarianten der Enigma
+                Das wohl am häufigsten eingesetzte und damit bekannteste Enigma Modell wird das Modell M3 sein, dass bei der Wehrmacht zum Einsatz kam. Es basierte auf der Enigma I, die auch bereits drei tauschbare Walzen hatte (zzgl. der Eintritts- und Umkehrwalze). Bei der M3 konnte allerdings auf einen erweiterten Walzensatz von 8 Walzen (statt 3 bzw. 5 bei der Enigma I) zurückgegriffen werden.
+                
+                Die M4 war dann eine Weiterentwicklung der Walzen der M3. Das Gehäuse selbst blieb gleich, nur die eine dicke Umkehrwalze der M3 wurde in der M4 durch zwei schmale Walzen ersetzt: einer Umkehrwalze "B schmal" bzw. "C schmal" und einer schmalen vierten Walze (beta und gamma genannt) daneben. Der Clou war die Kompatibilität zur M3. Wurde die Umkehrwalze B schmal und die Walze beta eingesetzt, verhielt sich die Enigma M4 wie eine M3 mit der Umkehrwalze B. Analog funktioniert eine M4 mit C schmal und gamma wie eine M3 mit Umkehrwalze C. So konnte man weiterhin mit Nachrichtenstellen kommunizieren, die noch über das alte Modell verfügten. Die M4 wurde als "U-Boot-Enigma" bekannt.
+                
+                Ob eine M3 oder M4 zum Einsatz kam, ließ sich u. U. an der Gruppierung des Geheimtextes erkennen: Während Heer und Luftwaffe Fünfergruppen benutzten, war es bei der Marine üblich, den Text in Vierergruppen anzuordnen.
+                
+                Es gab weitere Versionen, z. B. für den kommerziellen oder ausländischen Markt, oder Modelle, die nur Ziffern statt Buchstaben kodierten.
+                
+                Übersicht über die Modelle:
+                Modellname	Jahr	Walzen	UKW	Kerben	Einsatzbereich
+                Enigma A	1923	4	keine	Getriebe	schreibend, zivil
+                Enigma B	1924	2 mal 4	keine	Getriebe	schreibend, zivil
+                Enigma C	1924	3	1 fest	1	schreibend, zivil
+                Enigma D	1926	3	1	1	kommerzieller Bereich, ab 1927 auch Reichswehr
+                Enigma G	1936	3 aus 3	1 rotierend	11, 15, 17	"Zählwerk", Spionageabwehr
+                Enigma H	1929	8	1 fest		schreibend, zivil
+                Enigma K	1936	3 aus 3	1 fest	1	kommerzieller Bereich
+                Enigma KS	1938	3 aus 3	1 fest	1	Schweizer Variante der Enigma K
+                Enigma KD	1944	3 aus 3	1 tauschbar, konfigurierbar (D)	1	Militärisches Amt (Mil Amt) Berlin - Madrid - Lissabon
+                Enigma T	1942	3 aus 8	1 tauschbar	5	"Tirpitz-Maschine", Komm. mit japanischem Militär
+                Enigma Z	1931	3 aus 3	1 rotierend	1	nur Ziffern, keine Buchstaben
+                Enigma I	1930	3 aus 3 (5)	1 (aus 3) fest	1	Heer, Luftwaffe
+                Enigma II	1929	8	1 fest		Wehrmacht (baugleich Enigma H)
+                Enigma M1	1934	3 aus 6	1 fest	1	Heer, Kriegsmarine
+                Enigma M2	1938	3 aus 7	1 fest	1	Heer, Kriegsmarine
+                Enigma M3	1939	3 aus 8	1 fest	1 (2)	Heer, Kriegsmarine
+                Enigma M4	1942	4 aus 8+2	1 aus 2	1 (2)	"Shark", Kriegsmarine (U-Boote)
+                Enigma R	1941	3 aus 3	1 rotierend	1	"Rocket", Reichsbahn
+                Enigma N	1945	3 aus 5	1 fest	1	"Norenigma", Norwegischer Geheimdienst
+                
+                </p>
+
+                <iframe width="1280" height="720" src="https://www.youtube.com/embed/5j09jnWQZqw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </body>
 </html>
