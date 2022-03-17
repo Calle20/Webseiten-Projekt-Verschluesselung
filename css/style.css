@@ -138,4 +138,26 @@ body{
   .last_element{
     margin-bottom: 1%;
   }
-  
+
+  .iframe-container{
+    position: relative;
+    width: 49.5%;
+    padding-bottom: 30%; 
+    height: 0;
+  }
+  .iframe-container iframe{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  #enigma_beispiel{
+      border-right: thin solid black;
+      padding-right: 3%;
+      width: 120%;
+  }
+  p ul{
+      margin-left: 4%;
+  }
+  #enigma{
+      align-items: baseline;
+  }
