@@ -1,8 +1,6 @@
 1. Weltkrieg:	
-1881	Fleissner Chiffre				
-1914	ABC Chiffre
-1914	Pletts Scheibe
-1917    Zimmermann-Depesche
+				
+
 1918	ADFGX Chiffre	
 1918	ADFGVX Chiffre		
 
