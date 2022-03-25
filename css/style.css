@@ -144,6 +144,7 @@ body{
     width: 49.5%;
     padding-bottom: 30%; 
     height: 0;
+    z-index: 0;
   }
   .iframe-container iframe{
     position: absolute;

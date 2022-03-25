@@ -13,6 +13,7 @@
   /* Style des Menüs*/
 .menu{
     display: flex;
+    z-index: 1;
     margin-left: -12%;
     margin-top: 0;
     padding: 0;
