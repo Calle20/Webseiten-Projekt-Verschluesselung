@@ -156,9 +156,13 @@ body{
       padding-right: 3%;
       width: 120%;
   }
-  p ul{
+  div.box ul{
       margin-left: 4%;
   }
+  
   #enigma{
       align-items: baseline;
+  }
+  #tableenigma{
+      text-align: center;
   }

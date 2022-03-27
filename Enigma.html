@@ -4,6 +4,7 @@
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <link rel="shortcut icon" type="image/x-icon" href="Medien/Icon/favicon.ico" />
         <link rel="icon" type="image/x-icon" href="Medien/Icon/favicon.ico" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <title>Enigma</title>
     </head>
     
@@ -65,16 +66,18 @@
                 <img src="https://kryptografie.de/kryptografie/chiffre/images/enigma-walzensatz.png" class="imgbox">
             </div>
 
-            <h2 class="subheading">Bedienung</h2>
+            <div data-aos="fade">
+                <h2 class="subheading">Bedienung</h2>
 
-            <p class="text">Bei der Enigma gab es 5 unterschiedliche Walzen, die mit römischen Zahlen durchnummeriert waren. Nach einer geheimen Schlüsseltabelle wählte man täglich drei der fünf Walzen und setzte diese, wie unter der Überschrift Walzenlage beschrieben, in die Enigma ein. Als Umkehrwalze wurde bis auf wenige Ausnahmen immer die UKW B eingesetzt. Als nächstes wurde die Ringstellung eingestellt. Dafür drehte man solange an den Walzen bis die angegebene Zahl am Sichtfenster sichtbar war. Danach wurden noch die Buchstaben auf dem Steckerbrett nach dem vorgegebenen Muster verbunden(AD: verbinde A mit D).</p>
+                <p class="text">Bei der Enigma gab es 5 unterschiedliche Walzen, die mit römischen Zahlen durchnummeriert waren. Nach einer geheimen Schlüsseltabelle wählte man täglich drei der fünf Walzen und setzte diese, wie unter der Überschrift Walzenlage beschrieben, in die Enigma ein. Als Umkehrwalze wurde bis auf wenige Ausnahmen immer die UKW B eingesetzt. Als nächstes wurde die Ringstellung eingestellt. Dafür drehte man solange an den Walzen bis die angegebene Zahl am Sichtfenster sichtbar war. Danach wurden noch die Buchstaben auf dem Steckerbrett nach dem vorgegebenen Muster verbunden(AD: verbinde A mit D).</p>
+            </div>
             
-            <div class="box">
+            <div class="box" data-aos="fade">
                 <div>
-                    <table class="text">
+                    <table class="text" id="tableenigma">
                         <tr>
-                            <th>Tag </th>
-                            <th>Walzenlage </th>
+                            <th>Tag &nbsp; </th>
+                            <th>Walzenlage &nbsp; </th>
                             <th>Ringstellung </th>
                             <th>Steckerverbindungen </th>
                         </tr>
@@ -101,10 +104,11 @@
                 <img src="Medien/Bilder/enigma_sichtfenster.jpeg" class="imgbox" width="50%">
             </div>
             
+            <div data-aos="fade">
+                <h2 class="subheading">Praktische Anwendung bei den Deutschen</h2>
+            </div>
 
-            <h2 class="subheading">Praktische Anwendung bei den Deutschen</h2>
-
-            <div class="box" id="enigma">
+            <div class="box" id="enigma" data-aos="fade">
                 <div id="enigma_beispiel">
                     <p class="text">Bei der praktischen Verschlüsselung gab es folgende Vorschriften:</p>
 
@@ -158,7 +162,7 @@
                 </div>
             </div>
             
-            <p class="text">Vollständiger Funkspruch: <br>
+            <p class="text" data-aos="fade">Vollständiger Funkspruch: <br>
                 2220 - 204 - qweewg <br>
                 <br> 
                 XYOWN LJPQH SVDWC LYXZQ FXHIU VWDJO BJNZX RCWEO TVNJC IONTF QNSXW
@@ -167,32 +171,30 @@
                 BDIBR VMJKR HTCUJ QPTEE IYNYN JBEAQ JCLMU ODFWM ARQCF OBWN
             </p>
                
-            <h2 class="subheading">Entschlüsselung des Enigma-Codes durch die Alliierten</h2>
+            <div class="box" data-aos="fade">
+                <div>
+                    <h2 class="subheading">Entschlüsselung des Enigma-Codes durch die Alliierten</h2>
                
-            <p class="text">Den Durchbruch bei der Entschlüsselung schaffte der britische Mathematiker Alan Turing, der ab 1939 in Bletchley Park arbeitet. Bletchley Park war das geheime Hauptquartier der britischen Kryptoanalytiker. Auf der Basis eines einfachen Modells polnischer Kryptoanalytiker entwickelte er eine elektromechanische Maschine, die sogenannte Bombe. Das Gerät engt die möglichen Lösungen des Chiffres auf wenige Möglichleiten ein. Um aber überhaupt zu funktionieren braucht die Bombe </p>
-            
-            
-            Hilfe durch den Wetterbericht
-            Allerdings: Um den Enigma-Code anzugehen, benötigen auch die Bomben einen ersten Ansatzpunkt – ein Wort oder Wortteil, von dem die Entschlüsseler raten konnten, was es im Klartext bedeutete. Hier kommt den in Bletchley Park über den Codes schwitzenden Kryptografen ein Schwachpunkt der deutschen Funksprüche zugute: Sie enthalten häufig Phrasen, die in den Funksprüchen in immer gleicher Form und oft an der gleichen Stelle auftauchen. Dazu gehören beispielsweise Ausdrücke wie "Oberkommando" oder die oft am Ende der Nachricht stehende Phrase "Heil Hitler". Zudem senden die deutschen Funker jeden Tag zur gleichen Zeit den Wetterbericht – und in ihm steht das Wort "Wetter" an prominenter Stelle.
-            
-            Ausgehend von diesen Schwachstellen gelingt es Turing und seinem Team, die möglichen Positionen der Enigma-Walzen zu erraten. Das allerdings erfordert mühsame und zeitaufwendige Kleinarbeit erst mit Papierschablonen und anschließend mit Nachbauten der Enigma-Walzen. Zunächst scheint aber der Enigma-Code trotz der vielversprechenden Ansatzpunkte nicht zu entschlüsseln.
-        
-            
-            Der Durchbruch: Die Enigma ist geknackt!
-            Doch dann kommt der Durchbruch: Am 17. Januar 1940 gelingt es den Kryptologen in Bletchley Park, erstmals eine Enigma-Meldung zu entschlüsseln – vorerst noch in Handarbeit. Noch benötigen sie dadurch Tage, manchmal sogar Wochen für eine Meldung – für den schnell fortschreitenden Krieg ist das viel zu langsam. Hier kommen nun Turings "Bomben" ins Spiel. Sie automatisieren das mühevolle Ausprobieren der Walzenpositionen und können so die 17.576 möglichen Positionen eines Enigma-Walzensets in rund 20 Minuten durchtesten.  Nach und nach gelingt es den Codeknackern von Bletchley Park damit, den Funkverkehr des deutschen Militärs immer schneller und besser mitzuhören.
-            
-            Dieser Durchbruch in der Entschlüsselung der Enigma ist letztlich kriegsentscheidend. Denn erst durch das Mitlesen der Funksprüche können die alliierten Truppen die Bewegungen der deutschen U-Boote nachvollziehen und so den U-Boot-Krieg für sich entscheiden. Auch bei wichtigen Schlachten im Mittelmeer und bei der Landung der Alliierten in der Normandie spielt die Kenntnis der deutschen Funksprüche eine entscheidende Rolle.
-            
-             Letztlich hat das Knacken des Enigma-Codes den Zweiten Weltkrieg vermutlich um Jahre verkürzt – und so Tausende von Menschen vor dem Tod auf dem Schlachtfeld oder in Bombentrümmern bewahrt.
+                    <p class="text">Den Durchbruch bei der Entschlüsselung schaffte der britische Mathematiker Alan Turing, der ab 1939 in Bletchley Park arbeitet. Bletchley Park war das geheime Hauptquartier der britischen Kryptoanalytiker. Auf der Basis eines einfachen Modells polnischer Kryptoanalytiker entwickelte er eine elektromechanische Maschine, die sogenannte Bombe. Das Gerät engt die möglichen Lösungen des Chiffres auf wenige Möglichleiten ein. Um aber überhaupt zu funktionieren braucht die Bombe einen ersten Ansatzpunkt - ein Wort, von dem man sicher wusste was es im Klartext bedeutet. Solche Worte waren beispielsweise "Oberkommando", die oft am Ende der Nachricht stehende Phrase "Heil Hitler" oder das Wort "Wetter" im jeden Tag zur gleichen Zeit gefunkten Wetterbericht. Aufgrund dieser Schwachstellen gelang es den Kryptoanalytikern im Bletchley Park mögliche Positionen der Enigma-Walzen zu erraten. Der Durchbruch bei der Entschlüsselung gelang am 17. Januar 1940. Mit der Hilfe der Bomben konnte man die die 17.576 möglichen Positionen eines Enigma-Walzensets in ca. 20 Minuten durchtesten. Die Entschlüsselung der Enigma war letzentlich kriegsentscheidend und der Zweite Weltkrieg wurde vermutlich um Jahre verkürzt.</p>
+                </div>
+                <img src="https://www.matematiksider.dk/enigma/bombe_replica_big.jpg" class="imgbox" width="25%">
+            </div>
 
-            <div class="box last_element">
+            <div class="box last_element" data-aos="fade">
                 <div class="iframe-container">
-                    <iframe width="1280" height="720" src="https://www.youtube.com/embed/5j09jnWQZqw" title="YouTube video player" frameborder="0" allow="accelerometer; au    toplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="1280" height="720" src="https://www.youtube.com/embed/5j09jnWQZqw" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>    
                 <div class="iframe-container">
-                    <iframe width="1280" height="720" src="https://www.youtube.com/embed/ybkkiGtJmkM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="1280" height="720" src="https://www.youtube.com/embed/ybkkiGtJmkM" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>    
         </div>
+        
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init({
+            easing:"ease-in-out-cubic"
+          });
+        </script>
     </body>
 </html>
