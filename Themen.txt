@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 1. Weltkrieg:	
 				
 
@@ -20,6 +21,8 @@ Zwischen den Kriegen
 1941	Doppelkastenschlüssel Chiffre	
 1941	Schlüsselgerät 41 (Hitlermühle)
 1944	Rasterschlüssel 44		
+=======
+>>>>>>> 4690dc1639b0d8cb4fe56d72ad7e113bb112c439
 1952	KL-7 Chiffriermaschine
 1955	Fialka Chiffriermaschine	
 1955	VIC Chiffre
@@ -31,6 +34,3 @@ Zwischen den Kriegen
 2000	AES 
 2000	Serpent Chiffre
 2000	MARS Chiffre
-
-
-Stromchiffre
