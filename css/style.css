@@ -166,3 +166,7 @@ body{
   #tableenigma{
       text-align: center;
   }
+  #OTP{
+      text-align: center;
+      width: 100%;    
+    }

@@ -4,6 +4,7 @@
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <link rel="shortcut icon" type="image/x-icon" href="Medien/Icon/favicon.ico" />
         <link rel="icon" type="image/x-icon" href="Medien/Icon/favicon.ico" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <title>Maschinen</title>
     </head>
     
@@ -12,31 +13,81 @@
         <div class="content">
             <h1 class="mainheading">Verschlüsselungen mit Maschinen</h1>
             
-            <h2 class="subheading">Heberns Rotor-Chiffriermaschine</h2>
+            <div class="box">
+                <div>
+                    <h2 class="subheading">Heberns Rotor-Chiffriermaschine</h2>
 
-            <p class="text">Die 1917 von Edward Hugh Hebern (1869-1952) erfundene Rotor-Chiffriermaschine <a href="https://de.wikipedia.org/wiki/Rotor-Chiffriermaschine" target="_blank">(Wikipedia)</a> war eine der ersten ihrer Art. Bei solchen Maschinen sind die Rotoren als drehbare Walzen angeordnet, ihre Stellung zueinander ändert sich während der Ver-/Entschlüsselung. Innerhalb der Walze war jeder Buchstabe fest mit einem anderen verbunden. 1921 gründete Hebern eine Firma in Oakland, Kalifornien, welche <strong>Hebern Code Company</strong> hieß. Er errichtete diese Firma um seine <strong>Hebern Electric Code Machine</strong> zu vermarkten. 2500 Aktionäre waren von seiner Idee überzeugt und stellten ihm ca. 1 Million US$ zur Verfügung. Er baute davon ein Fabrikgebäude mit 1500 Arbeitern und hatte das zur verfügung gestellte Geld bereits schon 1926 aufgebraucht. Zudem hatte er nur Insgesammt 12 Machinen zu diesem Zeitpunkt verkauft.</p>
+                    <p class="text">Die 1917 von Edward Hugh Hebern (1869-1952) erfundene Rotor-Chiffriermaschine <a href="https://de.wikipedia.org/wiki/Rotor-Chiffriermaschine" target="_blank">(Wikipedia)</a> war eine der ersten ihrer Art. 1921 gründete Hebern eine Firma in Oakland, Kalifornien, die <strong>Hebern Code Company</strong>. Mit dieser Firma verkaufte er seine <strong>Hebern Electric Code Machine</strong>. 2500 Aktionäre waren von seiner Idee überzeugt und stellten ihm ca. 1 Million US$ zur Verfügung. Er baute davon ein Fabrikgebäude mit 1500 Arbeitern, hatte das Geld aber bereits 1926 aufgebraucht. Zudem hatte er nur insgesammt 12 Maschinen zu diesem Zeitpunkt verkauft. Seine Firma ging pleite.</p>
 
-            <p class="text">Die Chiffreirmaschine benutzt schmale Walzen mit je 26 elektrischen Kontakten auf beiden Seiten, das bedeutete das ein Kontakt für einen Buchstaben im Alphabet steht. <br>
-            Heberns erste Chiffriermaschine hatte nur einen Rotor, welcher mit einer Tastatur und mit Glühbirnen verbunden war. Wenn man eine Taste betätigte wurde ein Strom von dort zu dem Rotor geleitet. Danach wurde die walze, welche mit einem anderen Buchstaben versehnen war, die Glühbirne zum Leuchten.Dadurch, dass die walze immer mit einem anderen Buchstbaen verbunden worden war entstand jedes mal bei Dechiffrieren, also auf dem Rückweg, N --> A und auf dem Hinweg A --> N. So konnte man den Klartext wieder ablesen, wenn man den Gehiemtext eingab.
-            </p>
+                    <p class="text">Die Chiffreirmaschine benutzt schmale Walzen mit je 26 elektrischen Kontakten auf beiden Seiten die im Inneren miteinander verbunden waren. Ähnlich funktionierte auch die im 2. Weltkrieg verwendete <a href="Enigma.html">Enigma</a>. Heberns erste Chiffriermaschine hatte nur einen Rotor, der mit einer Tastatur und mit Glühbirnen verbunden war. Wenn man eine Taste betätigte wurde ein Strom von ihr zum Rotor geleitet. Durch den Rotor gelang der Strom zu einer Glühbirne, die dann leuchtete. Außerdem wurde bei jedem Tastendruck die Walze um eine Position weitergedreht. Da eine Maschine mit einem Rotor sehr unsicher ist, fügte Hebern weitere Walzen hinzu. Die sicherste Maschine hatte 5 Walzen.</p>
+                </div>
+                <img src="https://ciphermachines.com/pictures/hebern01.jpg" class="imgbox" width="20%">
+            </div>
             
-            
-            <h2 class="subheading">One-Time-Pad</h2>
+            <div class="box">
+                <div>
+                    <h2 class="subheading">One-Time-Pad</h2>
 
-            <p class="text">Das Verfahren wurde zum ersten mal vom amerikanischen Kryptologen Frank Miller im Jahr 1882 vorgeschlagen, bevor es 35 Jahre später durch seinen Landsmann zum Patent angemeldet wurde. Der amerikaner Joseph O. Mauborne setzte diese Idee um und nannte sie One-Time Pad. Kurz darauf fingen die Deutschen Werner Kunze, Rudolf Schauffler und Ericj Langlotz an der Idee zu arbeiten. Sie arbeiteten daran die Blöcke, welche mit zufällig bedruckten Buchstaben, zur Überschlüsselung der diplomatischen Codes zu verwenden. Sie bezeichnten diese dann auch als i-Wurm - individueller Wurm. Diese Methone wurde dann auch von der Weimarer Republik eingesetzt.</p>
-
-            <p class="text">Bei dem One-Time Pad werden einzelne Buchtsben oder Zeichen in ander Buchstaben oder Zeihcen umgewandelt. Das Kennzeichende Merkmnal dieser Machine ist die Einmalsverschlüsselung was die einmalige Verendung eines zufälligen Schlüssels kennzeichnet. Der Schlüssel muss aber die gleiche Länge haben wie die zu verschlüsselnde Nachicht.
-            Der Klartext und auch das Chiffrat haben beim Zeichenfolgen die gleiche Länge. </p>
+                    <p class="text">Das Verfahren wurde zum ersten Mal vom amerikanischen Kryptologen Frank Miller im Jahr 1882 vorgeschlagen, bevor es 35 Jahre später zum Patent angemeldet wurde. Der Amerikaner Joseph O. Mauborne setzte diese Idee um und nannte sie One-Time Pad. Kurz darauf fingen die Deutschen Werner Kunze, Rudolf Schauffler und Ericj Langlotz an der Idee zu arbeiten. Diese Methode wurde u.a. im diplomatischen Dienst der Weimarer Republik oder beim Heißen Draht (direkte Telefonverbindung zwischen dem amerikanischen Präsidenten und dem sowjetischen Generalsekretär) eingesetzt. <br>
+                    Zur Verschlüsselung wird ein Zeichen des Klartextes mit einem Zeichen des Schlüssels kombiniert. Das bedeutet, dass der Schlüssel genau so lang wie der zu verschlüsselnde Text sein muss. Damit die Sicherheit des Verfahrens gewährleistet ist, muss der Schlüssel zufällig sein und er darf nur einmal verwendet werden. <br>
+                    Vorteile: hohe Sicherheit, Ausführung mit Papier und Bleistift möglich  <br>
+                    Nachteile: erforderliche Schlüssellänge -> je länger der Klartext, desto länger die Verschlüsselung <br>
+                    Nachdem es vor allem im kalten Krieg eingesetzt wurde, verlor das Verfahren in der Moderne immer mehr an Bedeutung.
+                    </p>
+                </div>
+                <div class="imgbox" id="OTP">
+                    <h3 class="subsubheading">Beispiel</h3>
+                    <p class="text">Der Text <strong>Hallo</strong> <br>
+                    soll mit dem Schlüssel <strong>Apfel</strong> verschlüsselt werden</p>
+                    <table class="text">
+                        <tr>
+                            <td></td>
+                            <td>H (8)</td>
+                            <td>A (1)</td>
+                            <td>L (12)</td>
+                            <td>L (12)</td>
+                            <td>O (15)</td>
+                        </tr>
+                        <tr>
+                            <td>+</td>
+                            <td>A (1)</td>
+                            <td>P (16)</td>
+                            <td>F (6)</td>
+                            <td>E (5)</td>
+                            <td>L (12)</td>
+                        </tr>
+                    </table>
+                    <hr>
+                    <table class="text">
+                        <tr>
+                            <td>=</td>
+                            <td>I (9)</td>
+                            <td>Q (17)</td>
+                            <td>R (18)</td>
+                            <td>Q (17)</td>
+                            <td>C (29-26=3)</td>
+                        </tr>
+                    </table>
+                    
+                </div>
+            </div>
             
-            
-            <h2 class="subheading">Kryha Chiffriermaschine</h2>	
+            <div class="box last_element" data-aos="fade">
+                <div>
+                    <h2 class="subheading">Kryha Chiffriermaschine</h2>	
 
-            <p class="text"> Die Kryha Chiffriermachine wurde von Alexander von Kryha in den 1920er Jahren entwickelt. Insgesammt gab es sie in 3 verschieden Ausführungen: Die Kryha Standart, die Liliput und die Electric. Die Kryha Standart war 4,5 kg schwer und in der Größe einer Hutschachtel. Die Liliput war der Nachfolger von der Kryha Standart und war kleiner und dadurch auch mobiler. Aber dadurch war sie nicht so kompfortabel in den Bedongungen. Die Electric war dann die elektrische Variante von den Beiden und ist desahlb auch schwerer, aber auch schneller. <br>
-            Die Kryha Chiffriermaschienen waren für den Bereich der Banken, Großunternehmnen und Diplomaten besenders gut geeignet. Doch auch die Polizei, der Geheimdienst und das Militär wurden die Maschinen von Kryha angeboten.</p>
-
-            <p class="text">Im Gehäuse der Chiffriermaschine sind um eine zentrale Achse eine innere Schiebe und ein Halb-Ring so angeordnet, dass sich die 26 Buchstaben des Alphabets jeweils gegenüber stehen.Die Buchstaben auf der Scheibe und dem Ring konnte man nach belieben wechseln und somit das Chiffrat immerwieder verändern. <br>
-            Bevor man die Machine benutzten wollte musste man siue auf einer Kurbel kurz aufziehen. Wenn man danach auf die Weiterschaltungstaste drückte, schaltete die Kryha die innere Scheibe um eine wechselnde Anzahl von Schritten weiter. Im getriebe der Weiterschlatungsmechanik wurden 17 Weiterschltungen eingestellt,bevor sich der Zyklus erneut Wiederholte.</p>
-            
+                    <p class="text"> Die Kryha Chiffriermachine wurde von Alexander von Kryha in den 1920er Jahren entwickelt. Insgesammt gab es sie in 3 verschieden Ausführungen: Die Kryha Standard, die Liliput und die Elektric. Die Kryha Standard war 4,5 kg schwer und hatte die Größe einer Hutschachtel. Die Liliput war der Nachfolger der Kryha Standard und war kleiner und dadurch auch mobiler. Aber dadurch war sie nicht so kompfortabel in der Bedingung. Die Electric war dann die elektrische Variante der Kryha-Maschine und ist schwerer, aber auch schneller. Die Kryha Chiffriermaschinen waren für Banken, Großunternehmen und Diplomaten gedacht. Doch auch der Polizei, dem Geheimdienst und dem Militär wurden die Maschinen von Kryha angeboten. <br>
+                    Im Gehäuse der Chiffriermaschine sind um eine zentrale Achse eine innere Schiebe und ein Halb-Ring so angeordnet, dass sich die 26 Buchstaben des Alphabets jeweils gegenüber stehen. Die Buchstaben auf der Scheibe und dem Ring konnte man beliebig wechseln und somit das Chiffrat immer wieder verändern. Bevor man die Machine benutzten konnte, musste man das Uhrwerk mit einer Kurbel aufziehen. Wenn man danach auf die Weiterschaltungstaste drückte, schaltete die Kryha die innere Scheibe um eine wechselnde Anzahl von Schritten weiter. Im Getriebe der Weiterschlatungsmechanik wurden 17 Weiterschaltungen eingestellt, bevor sich der Zyklus erneut wiederholte. Um einen Text zu Verschlüsseln, brachte man die Kryha in die Ausgangsstellung. Dann ging es los und man verschlüsselte die Buchstaben ähnlich wie mit einer Chiffrierscheibe. Nchdem man einen Buchstaben abgelesen hatte, drückte man die Weiterschaltungstaste und die Scheiben drehten sich weiter. Kryha berechnete als Anzahl aller Möglichkeiten der Maschine eine 23-stellige Zahl. 1933 gelang die Entschlüsselung der Maschine innerhalb von ein paar Stunden.</p>
+                </div>
+                <img src="https://kryptografie.de/kryptografie/chiffre/images/kryha.jpg" class="imgbox" width="45%">
+            </div>
         </div>
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init({
+            easing:"ease-in-out-cubic"
+          });
+        </script>
     </body>
 </html>

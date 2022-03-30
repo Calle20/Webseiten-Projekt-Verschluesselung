@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-1. Weltkrieg:	
-				
-
-	
-
-Zwischen den Kriegen
-1925	Kryha Chiffriermaschine
-1922	M-94 / CSP-488
-1916	M-138 / CSP-845	Parker Hitt
-1917	Heberns Rotor-Chiffriermaschine
-
-2. Weltkrieg		
-1932	Enigma Chiffriermaschine				
-1932	Geheimschreiber T52
-1934	Red Chiffriermaschine
-1936	M-209 / CSP-1500 Chiffriermaschine Hagelin
-1937	Purple Chiffriermaschine	
-1938	Lorenz Maschine							
-1940	SIGABA Rotor-Chiffriermaschine
-1941	Doppelkastenschlüssel Chiffre	
-1941	Schlüsselgerät 41 (Hitlermühle)
-1944	Rasterschlüssel 44		
-=======
->>>>>>> 4690dc1639b0d8cb4fe56d72ad7e113bb112c439
 1952	KL-7 Chiffriermaschine
 1955	Fialka Chiffriermaschine	
 1955	VIC Chiffre
