@@ -5,11 +5,12 @@
         <link rel="shortcut icon" type="image/x-icon" href="Medien/Icon/favicon.ico" />
         <link rel="icon" type="image/x-icon" href="Medien/Icon/favicon.ico" />
         <script src="js/CaeserAnimation.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <meta charset="UTF-8">
         <title>Home</title>
     </head>
     
-    <body onload="Caeser_Decode()">
+    <body onbeforeunload="DoNotAgain()" onload="CheckDoing()">
         <script type="text/javascript" src="js/menü.js"></script>
         <div class="content" >
             <h1 class="mainheading">Verschlüsselung von Daten</h1>

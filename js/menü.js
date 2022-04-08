@@ -1,7 +1,7 @@
 document.write(
           "        <div class=\"menu\">",
           "            <div class=\"el\">",
-          "                <p><a href=\"index.html\" class=\"p\">Home</a></p>",
+          "                <p><a href=\"index.html?doAnimation=false\" class=\"p\">Home</a></p>",
           "                <p><a href=\"Altertum.html\" class=\"p\">Altertum</a></p>",
           "                <p><a href=\"Anfänge_symmetrische_Verschlüsselung.html\" class=\"p\">Anfänge der symmetrischen Verschlüsselung</a></p>",
           "                <p><a href=\"Ab_Mittelalter.html\" class=\"p\">Verschlüsselungen ab dem Mittelalter</a></p>",

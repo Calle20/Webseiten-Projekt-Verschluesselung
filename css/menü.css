@@ -63,6 +63,9 @@
     font-size: 1vw;
     margin-top: 5%;
   }
+  div.el p{
+    margin-bottom: 0.5vw;
+  }
 .menuside{
     writing-mode: vertical-lr;
     margin-left: 97%;
