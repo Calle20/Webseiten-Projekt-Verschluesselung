@@ -4,6 +4,7 @@
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <link rel="shortcut icon" type="image/x-icon" href="Medien/Icon/favicon.ico" />
         <link rel="icon" type="image/x-icon" href="Medien/Icon/favicon.ico" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <title>DES</title>
     </head>
     
@@ -22,38 +23,44 @@
             
             <h2 class="subheading">Funktionsweise</h2>
 
-            <p class="text">Der Algorithmus ist eine Blockverschlüsselung auf Bit-Ebene. Das heißt, dass der Klartext in 64 bit große Blöcke zerlegt wird, die einzeln jeweils mit einem 64-bit-Schlüssel chiffriert werden. Dadurch werden 64 bit Klartext in 64 bit Geheimtext übersetzt. Von diesen 64 Bits stehen aber nur 56 Bits zur Verfügung, da jedes achte Bit als <a href="https://de.wikipedia.org/wiki/Parit%C3%A4tsbit" target="_blank">Paritäts-Bit</a> verwendet wird. <br>
-            Der Algorithmus des DES beruht auf einem sogenannten Feistel-Netzwerk, das 16 mal durchlaufen wird. Das Verfahren lässt sich in vier Schritten beschreiben:</p>
-
             <div class="box">
-                <ol class="text">
-                    <li>Eingangspermutation: Jeder 64 Bit Klartext-Block wird einem Verfahren unterzogen, das die Reihenfolge der Bits nach einer festgelegten Reihenfolge ändert. Das Ergebnis wird in zwei 32-bit-Blöcke geschrieben, sodass eine linke (L) und eine rechte Blockhälfte (R) entsteht. </li>
-                    <li>Schlüsselpermutation: Beim effektiv Schlüssel (56 bit) werden wie beim Klartext die Bits nach einer festgelegten Reihenfolge vertauscht. Anschließend wird der Schlüssel in zwei 28 bit große Blöcke aufgeteilt (C und D). Für jede der 16 Runden wird dann aus den beiden Schlüsselblöcken C und D nach einem festgelegten Schlüsselauswahlverfahren ein 48 Bit großer Rundenschlüssel erstellt.</li>
-                    <li>Verschlüsselungsrunden: </li>
-                </ol>
+                <div>
+                    <p class="text">Der Algorithmus ist eine Blockverschlüsselung auf Bit-Ebene. Das heißt, dass der Klartext in 64 Bit große Blöcke zerlegt wird, die einzeln jeweils mit einem 64-Bit-Schlüssel chiffriert werden. Dadurch werden 64 Bit Klartext in 64 Bit Geheimtext übersetzt. Von diesen 64 Bits stehen aber nur 56 Bits zur Verfügung, da jedes achte Bit als <a href="https://de.wikipedia.org/wiki/Parit%C3%A4tsBit" target="_blank">Paritäts-Bit</a> verwendet wird. <br>
+                    Der Algorithmus des DES beruht auf einem sogenannten Feistel-Netzwerk, das 16 mal durchlaufen wird. Das Verfahren lässt sich in vier Schritten beschreiben:</p>
+                    <ol class="text">
+                        <li>Eingangspermutation: Jeder 64 Bit Klartext-Block wird einem Verfahren unterzogen, das die Reihenfolge der Bits nach einer festgelegten Reihenfolge ändert. Das Ergebnis wird in zwei 32-Bit-Blöcke geschrieben, sodass eine linke (L) und eine rechte Blockhälfte (R) entsteht. </li>
+                        <br>
+                        <li>Schlüsselpermutation: Beim effektiv Schlüssel (56 Bit) werden wie beim Klartext die Bits nach einer festgelegten Reihenfolge vertauscht. Anschließend wird der Schlüssel in zwei 28 Bit große Blöcke aufgeteilt (C und D). Für jede der 16 Runden wird dann aus den beiden Schlüsselblöcken C und D nach einem festgelegten Schlüsselauswahlverfahren ein 48 Bit großer Rundenschlüssel erstellt.</li>
+                        <br>
+                        <li>Verschlüsselungsrunden: Es werden 16 Verschlüsslungsrunden durchlaufen. In die f- Funktion kommt jeweils der rechte Halbblock und der 48-Bit-Rundenschlüssel. Die Funktion besteht aus folgenden Schritten:
+                            <ul>
+                                <li>Expansion: Der 32 Bit große rechte Halbblock wird nach einem festgelegten Ablauf auf 48 Bit erweitert.</li>
+                                <br>
+                                <li>XOR-Verknüpfung: Der auf 48 Bit vergrößerte Halbblock wird mit dem 48-Bit-Rundenschlüssel mittels einer XOR-Operation (<a href="https://de.wikipedia.org/wiki/Exklusiv-Oder-Gatter" target="_blank">Wikipedia</a>) verknüpft. Das Ergebnis ist ein 48-Bit-Block.</li>
+                                <br>    
+                                <li>S-Boxen: Der 48-Bit-Block wird in acht 6-Bit-Blöcke aufgeteilt. In den sogenannten S-Boxen werden dann nach einem festen Verfahren die 6-Bit-Blöcke durch 4-Bit-Blöcke ersetzt. Anschließend werden die Blöcke zu 32 Bit zusammengefasst.</li>
+                                <br>
+                                <li>Permutation: Die Reihenfolge der Bits des 32-Bit-Blocks wird mit einem festgelegten Verfahren vertauscht.</li>
+                                <br>
+                            </ul>
+                        XOR-Verknüpfung von R-Block und L-Block: Nach der f-Funktion wird das Ergebnis mit dem unbenutzten L-Block mittels einer XOR-Operation verknüpft. Das Ergebnis ist ein 32-Bit-Block, der als neuer R-Block dient. Der R-Block der ersten Runde ist dann der L-Block der zweiten Runde. 
+                        </li>
+                        <br>
+                        <li>Ausgangspermutation: Der L-Block und der R-Block werden zu einem 64-Bit-Block zusammengefasst und einer umgekehrten Eingangspermutation unterzogen.</li>
+                    </ol>
+                </div>
+                <img src="Medien/Bilder/DES1.png" class="imgbox" width="30%">
             </div>
 
-
-            3. Verschlüsselungsrunden: Jede Verschlüsselungsrunde umfasst die Schritte a) bis d). Pro Schleife gehen jeweils ein Halbblock R und ein Rundenschlüssel in die Verschlüsselung ein. Der Halbblock L bleibt zunächst außen vor.
-
-                Expansion: Der Halbblock R wird mittels Expansion auf einen 48-bit-Block erweitert. Dazu werden die 32 bit des Halbblocks im Rahmen der Expansion in 4-bit-Gruppen aufgeteilt und entsprechend folgendem Schema teilweise dupliziert und permutiert:
-
-                XOR-Verknüpfung von Datenblock und Rundenschlüssel: In jeder Verschlüsselungsrunde wird der auf 48 bit expandierte Block R mit einem 48-bit-Rundenschlüssel mittels einer XOR-Operation verknüpft. Das Ergebnis der XOR-Verknüpfung ist wiederum ein 48-bit-Block.
-
-                S-Boxen (Substitutionsboxen): Im Anschluss an die XOR-Verknüpfung wird der 48-bit-Block in acht 6-bit-Blöcke aufgeteilt, mithilfe von S-Boxen durch acht 4-bit-Blöcke substituiert und zu einem 32-bit-Block zusammengefasst. Das Ergebnis der Substitutionsboxen wird erneut einer Permutation unterzogen.
-
-                XOR-Verknüpfung von R-Block und L-Block: Nach jeder Verschlüsselungsrunde wird das Ergebnis der S-Boxen mittels XOR mit dem bisher ungenutzten L-Block verknüpft. Das Ergebnis ist ein 32-bit-Block, der als neuer R-Block in die zweite Verschlüsselungsrunde eingeht. Der R-Block der ersten Runde dient als L-Block der zweiten Runde.
-
-            4. Ausgangspermutation: Wurden alle 16 Verschlüsselungsrunden durchlaufen, werden L- und R-Block zu einem 64-bit-Block zusammengefasst und einer zur Eingangspermutation inversen Ausgangspermutation unterzogen. Der Klartext ist nun chiffriert.
+            <p class="text">Die Entschlüsselung erfolgt nach dem selben Schema in umgekehrter Reihenfolge.</p>
             
-            Die Entschlüsselung eines per DES chiffrierten Geheimtextes erfolgt nach demselben Schema in umgekehrter Reihenfolge.
-            
+            <div data-aos="fade">
+                <h2 class="subheading">Schwächen des DES</h2>
 
-            <h2 class="subheading">Schwächen des DES</h2>
+                <p class="text">Der größte Nachteil des DES war die geringe Schlüssellänge von effektiv nur 56 Bit. Bei dieser Schlüssellänge gibt es "nur" ca. 72 Billiarden mögliche Schlüssel. Diese kann man einfach systematisch durchtesten und hat spätestens nach 72 Billiarden Versuchen den entschlüsselten Text. Bereits 1994 gelang dies zwölf HP-9735-Workstations mit einem Rechenaufwand von 50 Tagen. Mit der heutigen Technik lässt sich so ein DES-Schlüssel mit dem systematischen Durchtesten aller Kombinationen innerhalb weniger Stunden entziffern. Es wird vermutet, dass die kurze Schlüssellänge mit Absicht gewählt wurde, weil die NSA schon damals genug Rechenpower besaß, um die Verschlüsselung zu knacken.</p>
+            </div>
 
-            <p class="text">Der größte Nachteil des DES war die geringe Schlüssellänge von effektiv nur 56 bit. Bei dieser Schlüssellänge gibt es "nur" ca. 72 Billiarden mögliche Schlüssel. Diese kann man einfach systematisch durchtesten und hat spätestens nach 72 Billiarden Versuchen den entschlüsselten Text. Bereits 1994 gelang dies zwölf HP-9735-Workstations mit einem Rechenaufwand von 50 Tagen. Mit der heutigen Technik lässt sich so ein DES-Schlüssel mit dem systematischen Durchtesten aller Kombinationen innerhalb weniger Stunden entziffern. Es wird vermutet, dass die kurze Schlüssellänge mit Absicht gewählt wurde, weil die NSA schon damals genug Rechenpower besaß, um die Verschlüsselung zu knacken.</p>
-
-            <div class="box">
+            <div class="box" data-aos="fade">
                 <div>
                     <h2 class="subheading">Maschinen zum Knacken von DES</h2>
                     
@@ -71,11 +78,20 @@
                 </figure>
             </div>
             
-            <h2 class="subheading">Weiterentwicklung des DES</h2>
+            <div data-aos="fade">
+                <h2 class="subheading">Weiterentwicklung des DES</h2>
 
-            <p class="text">Der DES war wegen der geringen Schlüssellänge bald nicht mehr ausreichend sicher und es musste Ersatz gefunden werden. Das erste Ersatz-Verfahren war der Anfang der 1980er entwickelter Triple-DES (auch 3DES, DES3 oder DESede genannt). Dieser ist eine Dreifachverschlüsselung mit DES mithilfe drei unabhängigen, voneinander verschiedenen Schlüsseln. Die Schlüssellänge ist mit 168 Bits dreimal so groß wie beim DES, die effektive Schlüssellänge ist aber wieder geringer und liegt nur bei 112 Bits. Bei der am häufigsten verwendeten Form des 3DES wird jeder Datenblock mit dem 1. Schlüssel verschlüsselt, mit dem 2. Schlüssel entschlüsselt und mit dem 3. Schlüssel wieder verschlüsselt.</p>
+                <p class="text">Der DES war wegen der geringen Schlüssellänge bald nicht mehr ausreichend sicher und es musste Ersatz gefunden werden. Das erste Ersatz-Verfahren war der Anfang der 1980er entwickelter Triple-DES (auch 3DES, DES3 oder DESede genannt). Dieser ist eine Dreifachverschlüsselung mit DES mithilfe drei unabhängigen, voneinander verschiedenen Schlüsseln. Die Schlüssellänge ist mit 168 Bits dreimal so groß wie beim DES, die effektive Schlüssellänge ist aber wieder geringer und liegt nur bei 112 Bits. Bei der am häufigsten verwendeten Form des 3DES wird jeder Datenblock mit dem 1. Schlüssel verschlüsselt, mit dem 2. Schlüssel entschlüsselt und mit dem 3. Schlüssel wieder verschlüsselt.</p>
 
-            <p class="text last_element">Trotz dieser Weiterentwicklung und trotz der Sicherheit des Algorithmus wurde aufgrund der kuren Schlüssellänge als Nachfolger des DES im Jahr 2000 der heute immer noch verwendete <a href="AES.html">AES</a> eingeführt.</p>
+                <p class="text last_element">Trotz dieser Weiterentwicklung und trotz der Sicherheit des Algorithmus wurde aufgrund der kuren Schlüssellänge als Nachfolger des DES im Jahr 2000 der heute immer noch verwendete <a href="AES.html">AES</a> eingeführt.</p>
+            </div>
         </div>
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init({
+            easing:"ease-in-out-cubic"
+          });
+        </script>
     </body>
 </html>
