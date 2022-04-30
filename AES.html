@@ -10,7 +10,43 @@
     <body>
         <script type="text/javascript" src="js/menü.js"></script>
         <div class="content">
-               
+            <h1 class="mainheading">AES</h1>
+            
+            <p class="text">Der Advanced Encryption Standard ist eine symmetrische Verschlüsselung, die Ende der 1990er von Joan Daemen und Vincent Rijmen unter dem Namen <strong>Rijndael</strong> entwickelt wurde.</p>
+            
+            <h2 class="subheading">Geschichte</h2>
+
+            <p class="text">Aufgrund der geringen Schlüssellänge des DES suchte man einen sicheres Nachfolgeverfahren. Deshalb veröffentlichte das US-amerikanische NIST (National Institute of Standards and Technology) am 2. Januar 1997 eine internationale Ausschreibung für eine neue Verschlüsselung. Am 2. Oktober 2000 wurde der Sieger bekannt gegeben: der belgische Algorithmus Rijndael. Ende 2000 wurde die Verschlüsselung dann in den USA als AES vom NIST standardisiert.</p>
+            
+            <h2 class="subheading">Funktionsweise</h2>
+
+            <div class="box">
+                <div>
+                    <p class="text">Die Verschlüsselung ist wie der DES eine Blockverschlüsselung auf Bit-Ebene. Der Klartext wird in 128-Bit-Blöcke zerlegt. Diese werden jeweils mit 128-, 192- oder 256-Bit-Schlüsseln verschlüsselt. Je nachdem welche Schlüsselvariante verwendet wird, heißen die Varianten AES-128, AES-192 und AES-256. Der Ablauf der Verschlüsselung eines Blockes lässt sich in vier Schritte unterteilen:</p>
+                    <ol class="text">
+                        <li>Schlüsselexpansion: Der AES nutzt in jeder Verschlüsselungsrunde einen neuen Rundenschlüssel. Dieser wird für jede Runde aus dem Ausgangsschlüssel nach einem festen Verfahren gebildet.</li>
+                        <br>
+                        <li>Vorrunde: Der 128-Bit-Eingabeblock wird in eine zweidimensionale 4x4 Tabelle (Array) übertragen. In jede Zelle kommen 8 Bits= 1 Byte. Dann wird diese Tabelle mithilfe einer XOR-Operation (<a href="https://de.wikipedia.org/wiki/Exklusiv-Oder-Gatter" target="_blank">Wikipedia</a>) mit dem ersten Rundenschlüssel verknüpft.</li>
+                        <br>
+                        <li>Verschlüsselungsrunden: Es gibt je nach Schlüssellänge unterschiedlich viele Verschlüsselungsrunden. 9 Runden beim AES-128, 11 Runden beim AES-192 und 13 Runden beim AES-256. In jeder Verschlüsselungsrunde werden folgende Schritte ausgeführt:
+                        <ul>
+                            <li>SubBytes: In jeder Zelle wird der Byte mithilfe von S-Boxen nach einem festen Verfahren ersetzt.</li>
+                            <li>ShiftRows: Die Zellen werden in der Tabelle nach links verschoben. Die Zellen der 1. Zeile werden nicht, die Zellen der 2. Zeile einmal, die Zellen der 3. Zeile zweimal und die Zellen der 4. Zeile dreimal nach links verschoben.</li>
+                            <li>MixColumns: Die Zellen werden innerhalb der Spalten nach einem festgelegten mathematischen Verfahren <a href="https://de.wikipedia.org/wiki/Rijndael_MixColumns" target="_blank">(Wikipedia)</a> vertauscht.</li>
+                            <li>KeyAddition: Am Ende jeder Runde findet eine weitere XOR-Verknüpfung der Tabelle mit dem aktuellen Rundenschlüssel statt.</li>
+                        </ul>
+                        </li>
+                        <br>
+                        <li>Schlussrunde: Zum Schluss werden noch einmal die Schritte SubBytes, ShiftRows und KeyAddition durchlaufen. Das Ergebnis ist der Geheimtext.</li>
+                    </ol>
+                    <p class="text">Die Entschlüsselung erfolgt nach dem selben Schema in umgekehrter Reihenfolge.</p>
+                </div>
+                <img src="Medien/Bilder/Advanced-Encryption-Standard-AES-Algorithm.png" class="imgbox" width="25%">
+            </div>
+            
+            <h2 class="subheading">Sicherheit und Verwendung</h2>
+
+            <p class="text last_element">Es gab noch keine praktisch relevanten Angriffsmethoden auf den AES. Da der Schlüssel mindestens 128 Bit groß ist, würde auch das systematische Durchprobieren (bei 128 Bit 340.282.366.920.938.463.463.374.607.431.768.211.456 Möglichkeiten!) nicht zum Erfolg führen. Deshalb gilt der Algorithmus bis heute als sicher. So sind zum Beispiel AES-192 und AES-256 in den USA für staatliche Dokumente mit höchster Geheimhaltungsstufe zugelassen. Da der Algorithmus nicht patentiert, frei verfügbar und ohne Lizenzgebühren einsetzbar ist, ist er heute in zahlreicher Hardware und Software implementiert und wird vielseitig verwendet. In vielen Betriebssystemen ist der AES integriert und übernimmt verschiedene Aufgaben. Zahlreiche Prozessoren unterstützen AES hardwaremäßig und sind dadurch bei der Ver- und Entschlüsselung schneller. Anwendung findet der Algorithmus beispielsweise als WLAN-Verschlüsselung, bei VPNs mit IPSec, zur Verschlüsselung von Dateien und von komprimierten Dateiarchiven wie 7-Zip.</p>
         </div>
     </body>
 </html>
