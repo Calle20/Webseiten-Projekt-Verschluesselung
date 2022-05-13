@@ -1,97 +1,109 @@
-.p , #menu p{
-    display: block;
-    color: #000;
-    padding: 8px 16px;
-    text-decoration: none;
-    font-size: 105%;
-    /*word-break:break-all;word-wrap:break-word;*/
-  }
-.mainmenu:hover, .p:hover {
-    background-color: #555;
-    color: white;
-  }
-  /* Style des Menüs*/
-.menu{
-    display: flex;
-    z-index: 1;
-    margin-left: -12%;
-    margin-top: 0;
-    padding: 0;
-    width: 15%;
-    background-color: #f1f1f1;
-    height: 98%;
-    position: fixed;
-    overflow: auto; 
-    box-shadow: 0px 9px 23px 4px rgba(0, 0, 0, 0.39);
-    transition: margin 500ms ;
-    overflow: hidden;
-    overflow-x: hidden;
-  }
-  /* Style des Menüs nach ausfahren*/
-.menu:hover {
-    margin: 0;
-    margin-left: -0.5%;
-    padding: 0;
-    width: 15%;
-    background-color: #f1f1f1;
-    height: 98%;
-    position: fixed;
-    overflow: auto;
-    box-shadow: 0px 9px 23px 4px rgba(0, 0, 0, 0.39);
-    overflow: hidden;
-    overflow-x: hidden;
-  }
-  .menu:hover .menuside{
-      visibility: hidden;
-  }
-  .content{
-    margin-left: 5%;
-    margin-right: 5%;
-    text-align: justify;
-    word-break:break-all;
-    word-wrap:break-word;
-  }
-  .menutext{
-    writing-mode: vertical-rl;
-    margin-top: 200%;
-    float: right;
-    position: absolute;
-  }
-  .el{
-    margin-left: 7%;
-    width: 80%;
-    font-size: 1vw;
-    margin-top: 5%;
-  }
-  div.el p{
-    margin-bottom: 0.5vw;
-  }
-.menuside{
-    writing-mode: vertical-lr;
-    margin-left: 97%;
-    margin-top: -140%;
-    font-size: 125%;
-    transition: visibility 200ms ease-in ;
+.p, #menu p {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-size: 105%;
+  border-radius: 0.3vw;
 }
+
+.mainmenu:hover, .p:hover {
+  background-color: #555;
+  color: white;
+  border-radius: 0.3vw;
+}
+
+.menu {
+  display: flex;
+  z-index: 1;
+  margin-left: -12%;
+  margin-top: 0;
+  padding: 0;
+  width: 15%;
+  background-color: #f1f1f1;
+  height: 98%;
+  position: fixed;
+  overflow: auto;
+  box-shadow: 0px 9px 23px 4px rgba(0, 0, 0, 0.39);
+  transition: margin 500ms;
+  overflow: hidden;
+  overflow-x: hidden;
+  border-radius: 1vw;
+}
+
+.menu:hover {
+  margin: 0;
+  margin-left: -0.5%;
+  padding: 0;
+  width: 15%;
+  background-color: #f1f1f1;
+  height: 98%;
+  position: fixed;
+  overflow: auto;
+  box-shadow: 0px 9px 23px 4px rgba(0, 0, 0, 0.39);
+  overflow: hidden;
+  overflow-x: hidden;
+  border-radius: 1vw;
+}
+
+.menu:hover .menuside {
+  visibility: hidden;
+}
+
+.content {
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: justify;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.menutext {
+  writing-mode: vertical-rl;
+  margin-top: 200%;
+  float: right;
+  position: absolute;
+}
+
+.el {
+  margin-left: 7%;
+  width: 80%;
+  font-size: 1vw;
+  margin-top: 5%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+}
+
+div.el p {
+  margin-bottom: 0.5vw;
+  border-radius: 0.3vw;
+}
+
+.menuside {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  margin-left: 97%;
+  margin-top: -170%;
+  font-size: 125%;
+  transition: visibility 200ms ease-in;
+}
+
 * {
   margin: 0;
   padding: 0;
-  }
-  
-  /*--formatiert die Menüleiste--*/
-  #menu{
-   margin-left: 10%;
+}
 
-  }
-  
-  /*--formatiert die Themenbl&ouml;cke--*/
-  #menu ul {
+#menu {
+  margin-left: 10%;
+}
+
+#menu ul {
   width: 75%;
   list-style-type: none;
-  }
+}
   
-  /*--definiert die "Drop-Down-Links" im Normalzustand--*/
-  #menu a {
+/*--definiert die "Drop-Down-Links" im Normalzustand--*/
+#menu a {
   text-decoration: none;
   display: block;
   border: 1px solid #ccc;
@@ -100,39 +112,39 @@
   color: black;
   font-size: 100%;
   width: 90%;
-  }
+  border-radius: 0.3vw;
+}
+
+/*--definiert die "Drop-Down-Links" im Hoverzustand--*/
+#menu a:hover {
+  background-color: #555;
+  color: white;
+  border-radius: 0.3vw;
+}
   
-  /*--definiert die "Drop-Down-Links" im Hoverzustand--*/
-  #menu a:hover {
-    background-color: #555;
-    color: white;
-  }
-  
-  /*verhindert im Zusammenhang mit position absolute bei ul ul
-  *eine H&ouml;henvergr&ouml;&szlig;erung von #menu beim Hovern--
-  */
-  
-  #menu li {
+#menu li {
   position: relative;
-  }
-  
-  /*--versteckt die "Drop-Down-Links", solange nicht gehovert wird--*/
-  #menu ul ul {
+}
+
+/*--versteckt die "Drop-Down-Links", solange nicht gehovert wird--*/
+#menu ul ul {
   position: absolute;
   top: 0;
   left: 83%;
   z-index: 2;
   display: none;
-  }
+}
   
-  /*--l&auml;sst die Dropdown-Links beim Hovern erscheinen--*/
-  #menu ul li:hover ul {
+/*--lässt die Dropdown-Links beim Hovern erscheinen--*/
+#menu ul li:hover ul {
   display: block;
-  }
-  #menu ul li:hover p{
-    background-color: #555;
-    color: white;
-  }
-  .left{
-    margin-left: -15%;
-  }
+}
+
+#menu ul li:hover p {
+  background-color: #555;
+  color: white;
+}
+
+.left {
+  margin-left: -15%;
+}

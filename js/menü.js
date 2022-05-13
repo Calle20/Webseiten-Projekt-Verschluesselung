@@ -31,7 +31,6 @@ document.write(
           "            </ul>",
           "            </div>",
           "            <p><a href=\"Asymmetrische_Verschlüsselung.html\" class=\"p\">Asymmetrische Verschlüsselung</a></p>",
-          "            <p><a href=\"Hashes.html\" class=\"p\">Hashes</a></p>",
           "            <p><a href=\"impressum.html\" class=\"p\">Impressum</a></p> ",
           "            <p class=\"menuside\">Menü</p>",
           "        </div>        ",

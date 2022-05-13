@@ -1,182 +1,225 @@
-.mainheading{
+.mainheading {
     text-align: center;
     font-size: 4vw;
-    text-shadow: 6px 2px 6px rgba(0, 0,0, 0.5) ;
+    text-shadow: 6px 2px 6px rgba(0, 0, 0, 0.5);
 }
-.text{
+
+.text {
     margin-top: 0.5%;
     font-size: 1.1vw;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 450;
+    font-weight: 325;
     word-break: break-word;
 }
-a{
+
+a {
     color: black;
 }
-a:hover{
+
+a:hover {
     color: blue;
 }
-.subheading{
+
+.subheading {
     font-size: 2vw;
     margin-top: 1%;
-    text-shadow: 6px 2px 6px rgba(0, 0,0, 0.25) ;
+    text-shadow: 6px 2px 6px rgba(0, 0, 0, 0.25);
 }
-.subsubheading{
+
+.subsubheading {
     font-size: 1.5vw;
     margin-top: 1%;
-    text-shadow: 6px 2px 6px rgba(0, 0,0, 0.125) ;
+    text-shadow: 6px 2px 6px rgba(0, 0, 0, 0.125);
 }
-#imgDefInd{
+
+#imgDefInd {
     width: 58%;
 }
-body{
+
+body {
     background-image: url("Background.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
-#videodef{
+
+#videodef {
     width: 42%;
     box-shadow: 10px 7px 15px rgba(0, 0, 0, 0.5);
 }
-.media-container{
+
+.media-container {
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     align-items: center;
     margin-top: 0.5%;
 }
+
 /*Index box*/
 #boxBack {
-    position: fixed; z-index: 999;
-    top: 0; left: 0;
-    width: 100vw; height: 100vh;
-   
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
     background: rgba(0, 0, 0, 0.5);
 
     display: none;
-  }
-#boxBack.show { display: block; }
+}
+
+#boxBack.show {
+    display: block;
+}
+
 #boxWrap {
     position: absolute;
-    top: 10%; left: 50%;
+    top: 10%;
+    left: 50%;
     transform: translate(-50%, -50%);
-   
-    min-width: 320px; max-width: 600px;
+
+    min-width: 320px;
+    max-width: 600px;
     padding: 10px;
 
     background: #fff;
-  }
+}
 
-  .box{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 1%;
-  }
-  .imgbox{
-      margin-left: 3%;
-  }
-  #video_altertum{
-      margin-top: 1%;
-      display: flex;
-      justify-content: center;
-  }
-  #tablepolybios td, #tablepolybios th{
+.box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1%;
+}
+
+.imgbox {
+    margin-left: 3%;
+}
+
+#video_altertum {
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+}
+
+#tablepolybios td, #tablepolybios th {
     width: 5vw;
     border: 1pt solid black;
     font-size: 1vw;
     text-align: center;
-  }
-  #tableatbash td, #tableatbash th{
+}
+
+#tableatbash td, #tableatbash th {
     width: 7vw;
     border: 1pt solid black;
     font-size: 1vw;
     text-align: center;
-  }
-  #CaeserDecode, #CaeserEncode{
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      margin-top: 1%;
-      width: 70%;
-  }
-  #VigenereDecode, #VigenereEncode{
+}
+
+#CaeserDecode, #CaeserEncode {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 1%;
+    width: 70%;
+}
+
+#VigenereDecode, #VigenereEncode {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     margin-top: 1%;
     width: 80%;
 }
-  #zahlde, #zahlen{
-      width: 2vw;
-  }
-  .button,.textbox{
-      font-size: 1vw;
-  }
-  #chifrrierimg{
-      margin-left: 1%;
-  }
-  #chiffrierscheibe{
-      width: 92%;
-      margin-top: 0;
-  }
-  #imgchiff{
-      margin-top: -5%;
-  }
-  #imgsymm{
-      margin-top: -1%;
-  } 
-  #caesertxt{
-    margin-top: 0%;
-  }
-  #txtakg{
-      width: 100%;
-  }
-  #imgfreimaurer, #imgstuart, table{
-    margin-top: 1%;
-  }
-  .last_element{
-    margin-bottom: 1%;
-  }
 
-  .iframe-container{
+#zahlde, #zahlen {
+    width: 2vw;
+}
+
+.button, .textbox {
+    font-size: 1vw;
+}
+
+#chifrrierimg {
+    margin-left: 1%;
+}
+
+#chiffrierscheibe {
+    width: 92%;
+    margin-top: 0;
+}
+
+#imgchiff {
+    margin-top: -5%;
+}
+
+#imgsymm {
+    margin-top: -1%;
+}
+
+#caesertxt {
+    margin-top: 0%;
+}
+
+#txtakg {
+    width: 100%;
+}
+
+#imgfreimaurer, #imgstuart, table {
+    margin-top: 1%;
+}
+
+.last_element {
+    margin-bottom: 1%;
+}
+
+.iframe-container {
     position: relative;
     width: 49.5%;
-    padding-bottom: 30%; 
+    padding-bottom: 30%;
     height: 0;
     z-index: 0;
-  }
-  .iframe-container iframe{
+}
+
+.iframe-container iframe {
     position: absolute;
     width: 100%;
     height: 100%;
-  }
-  #enigma_beispiel{
-      border-right: thin solid black;
-      padding-right: 3%;
-      width: 120%;
-  }
-  div.box ul{
-      margin-left: 4%;
-  }
-  
-  #enigma{
-      align-items: baseline;
-  }
-  #tableenigma{
-      text-align: center;
-  }
-  #OTP{
-      text-align: center;
-      width: 100%;    
-    }
-figcaption.text{
+}
+
+#enigma_beispiel {
+    border-right: thin solid black;
+    padding-right: 3%;
+    width: 120%;
+}
+
+div.box ul {
+    margin-left: 4%;
+}
+
+#enigma {
+    align-items: baseline;
+}
+
+#tableenigma {
+    text-align: center;
+}
+
+#OTP {
+    text-align: center;
+    width: 100%;
+}
+
+figcaption.text {
     text-align: center;
     font-size: 1vw;
 }
-figure.imgbox{
+
+figure.imgbox {
     width: 90%;
 }
-div.box ol{
+
+div.box ol {
     margin-left: 2%;
 }
