@@ -30,61 +30,24 @@
 
             <p class="text">Als erstes wird bei der RSA-Verschlüsselung der öffentliche und der private Schlüssel erstellt. Dazu benötigt man zwei Primzahlen p und q. Diese multipliziert ergeben N. Primzahlen eigenen sich besonders gut, weil die Multiplikation von zwei Primzahlen einfach und schnell ist, die Zerlegung des Produktes in die Primfaktoren jedoch schwierig und sehr zeitaufwendig ist. Für den öffentlichen Schlüssel braucht man außer N noch e, eine Zahl, die nach gewissen Vorgaben zufällig gewählt wird. Der öffentliche Schlüssel besteht dann aus e und N, die im Klartext an jeden Kommunikationsteilnehmer weitergegeben werden können. Der private Schlüssel besteht aus einer dritten Zahl d, die aus den bisherigen Zahlen berechnet wird, und N. <br>
             Wenn man einen Text mit dem RSA verschlüsseln will, muss man diesen erst in natürliche Zahlen umwandeln. Diese Zahlen werden dann mit dem Public-Key verrechnet und die Nachricht wird verschlüsselt. Da der Public-Key mit dem Private-Key mathematisch zusammenhängt, kann nur der Private-Key die Nachricht wieder entschlüsseln.</p>
+
+            <div class="box last_element">
+                <div>
+                    
             
-            <h3 class="subsubheading">RSA zum Signieren von Nachrichten</h3>
+                    <h3 class="subsubheading">RSA zum Signieren von Nachrichten</h3>
 
+                    <p class="text">Da jeder eine Nachricht mit dem öffentlichen Schlüssel verschlüsseln kann, kann man sich nicht sicher sein, von wem die Nachrichten kommen. Dieses Problem wird gelöst, indem der Absender die Nachricht unterschreibt und diese Signatur doppelt verschlüsselt. Hierbei wird zwischen der universellen und der nicht-universellen Unterschrift unterschieden. Bei der universellen Unterschrift wird die Signatur mit dem Public-Key des Absenders verschlüsselt, der Empfänger kann dann mit dem Public-Key des Absenders die Unterschrift wieder entschlüsseln. Bei der nicht-universellen Unterschrift wird die universelle Unterschrift zusätzlich mit dem Public-Key des Empfängers verschlüsselt. Dadurch kann nur der Empfänger die Signatur mit seinem Private-Key entschlüsseln.</p>
 
-            <p class="text">Da jeder eine Nachricht mit dem öffentlichen Schlüssel verschlüsseln kann, kann man sich nicht sicher sein, von wem die Nachrichten kommen.  </p>
+                    <h3 class="subsubheading">Sicherheit von RSA</h3>
 
-            <br><br>
-
-
-                Bob kann sich aber nicht sicher sein, dass die Nachricht wirklich von Alice stammt. Denn für die
-                Verschlüsselung der Nachricht war nur sein öffentlicher Schlüssel nötig.
-                Dieses Problem löst Alice, indem sie ihre Nachricht unterschreibt und diese Signatur zweimal
-                verschlüsselt.
-                Hierbei wird das Prinzip der Verschlüsselung und Entschlüsselung umgekehrt. Man unterscheidet
-                zwischen der universellen und der nicht-universellen Unterschrift.
-                Bei der universellen Unterschrift verschlüsselt Alice ihre Signatur mit ihrem eigenen public key und
-                sendet die Nachricht an Bob. Der kann mit Hilfe des öffentlich zugänglichen Schlüssels von Alice die
-                Signatur wieder entschlüsseln.
-
-
-
-                Zwar kann jeder andere diese Nachricht mit dem öffentlichen Schlüssel entschlüsseln, jedoch ist es
-                auch nicht die Absicht, die Unterschrift geheimzuhalten. Vielmehr soll die Authentizität des Absenders
-                gewährleistet sein.
-                Bei der nicht-universellen Unterschrift wird die mit dem eigenen public key verschlüsselte Signatur
-                zusätzlich mit dem public key des Empfängers, also von Bob, verschlüsselt. Somit wird gewährleistet,
-                dass nur Bob diese Unterschrift entschlüsseln und identifizieren kann.
-                Das asymmetrische RSA-Verfahren hat einige Vorteile gegenüber anderen Verschlüsselungsverfahren.
-                Es gilt als sicher, da aus dem öffentlichen Schlüssel derzeit nicht der private Schlüssel berechnet
-                werden kann.
-                
-
-
-                
-                Welche Primzahlen in die Berechnung des privaten Schlüssels eingehen, muss geheim bleiben, um die Sicherheit der RSA-Verschlüsselung zu gewährleisten. Das Produkt der beiden Primzahlen hingegen kann im öffentlichen Schlüssel in Klartext verwendet werden, da man davon ausgeht, dass es heutzutage keinen effizienten Algorithmus gibt, der das Produkt sehr großer Primzahlen in relevanter Zeit in seine Faktoren zerlegen kann. Es ist somit nicht möglich, p und q aus N zu berechnen. Es sei denn, man kann die Berechnung abkürzen. Eine solche Falltür stellt der Wert d dar, der lediglich dem Besitzer des privaten Schlüssels bekannt ist.
-                
-                Die Sicherheit des RSA-Algorithmus ist in hohem Maße abhängig vom technischen Fortschritt. Die Rechenleistung von Computern verdoppelt sich in etwa alle zwei Jahre. Es ist somit nicht ausgeschlossen, dass in absehbarer Zeit ein effizientes Verfahren zur Primfaktorzerlegung in der heute üblichen Größenordnung zur Verfügung steht. In diesem Fall bietet RSA die Möglichkeit, den Algorithmus der technischen Entwicklung anzupassen, indem zur Berechnung der Schlüssel noch größere Primzahlen herangezogen werden.
-                
-                Für einen sicheren Betrieb des RSA-Verfahrens gibt die Bundesnetzagentur für den Wert N (das Produkt beider Primzahlen) bis Ende 2020 eine Mindestlänge von 1.976 bit an, empfiehlt jedoch 2.048 bit. Dies entspricht Primzahlen in einer Größenordnung von etwa 300 Dezimalstellen.
-
-
-
-                Die Hauptsicherheit des RSA-Algorithmus liegt darin, dass es praktisch unmöglich ist, die beiden
-                Primfaktoren p und q zu finden, wenn sie ausreichend groß sind.
-                Um p und q zu ermitteln, benötigt man mit dem schnellsten heute bekannten Algorithmus ca. 50
-                Millionen Jahre.
-
-                <div class="media-container">
-                    <img src="Medien/Bilder/" width="20%" alt="Platzhalter">
-                    <video controls="controls" data-aspect="16x9" class="imgbox" width="50%"> 
-                        <source src="Medien/Videos/RSA-Verfahren.mp4" type="video/mp4" />
-				        <track src="Medien/Videos/RSA-Verfahren.mp4" kind="captions" label="An" />
-			        </video>
+                    <p class="text">Wie sicher das Verfahren ist, hängt vom technischen Fortschritt ab. Wenn irgendwann Computer genug Rechenleistung haben, um ein Produkt in kurzer Zeit in die Primfaktoren zu zerlegen, ist der RSA-Algorithmus nicht mehr sicher. Dem kann man jedoch entgegenwirken, indem man die Primzahlen p und q vergrößert. Für einen sicheren Betrieb gibt die Bundesnetzagentur für den Wert N bis Ende 2020 eine Mindestlänge von 1.976 bit an, empfiehlt jedoch 2.048 bit. Das ist eine Primzahl mit 300 Dezimalstellen.</p>
                 </div>
-                
+                <video controls="controls" data-aspect="16x9" class="imgbox" width="50%"> 
+                    <source src="Medien/Videos/RSA-Verfahren.mp4" type="video/mp4" />
+				    <track src="Medien/Videos/RSA-Verfahren.mp4" kind="captions" label="An" />
+			    </video>
+            </div> 
         </div>
     </body>
 </html>

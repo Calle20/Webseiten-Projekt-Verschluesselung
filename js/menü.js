@@ -5,7 +5,7 @@ document.write(
           "                <p><a href=\"Altertum.html\" class=\"p\">Altertum</a></p>",
           "                <p><a href=\"Anfänge_symmetrische_Verschlüsselung.html\" class=\"p\">Anfänge der symmetrischen Verschlüsselung</a></p>",
           "                <p><a href=\"Ab_Mittelalter.html\" class=\"p\">Verschlüsselungen ab dem Mittelalter</a></p>",
-          "                <p><a href=\"1._Weltkrieg.html\" class=\"p\">Verschlüsselungen im 1. Weltkrieg</a></p>",
+          "                <p><a href=\"1._Weltkrieg.html\" class=\"p\">Verschlüsselungen im <br> 1. Weltkrieg</a></p>",
           "                <p><a href=\"Maschinen.html\" class=\"p\">Verschlüsselung mit Maschinen</a></p>",
           "            <div id=\"menu\">",
           "            <ul>",
